@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  organization: MyString
+  contact: MyText
+  description: MyText
+  oncampus: false
+  islegacy: false
+
+two:
+  title: MyString
+  organization: MyString
+  contact: MyText
+  description: MyText
+  oncampus: false
+  islegacy: false
