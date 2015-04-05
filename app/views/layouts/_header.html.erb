@@ -3,6 +3,7 @@
     <%= link_to "My app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
         <li><%= link_to "Add Project", :controller => :projects, :action => :new %></li>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
@@ -24,6 +25,13 @@
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
+=======
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Add Project", :controller => :projects, :action => :new %></li>
+        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Help",   help_path %></li>
+        <li><%= link_to "Log in", '#' %></li>
+>>>>>>> 1240e23b348b18b46e77c8f2a590549b84b706dd
       </ul>
     </nav>
   </div>
