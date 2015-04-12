@@ -2,16 +2,8 @@
 
 one:
   title: MyString
-  organization: MyString
-  contact: MyText
-  description: MyText
-  oncampus: false
-  islegacy: false
+  org: MyString
 
 two:
   title: MyString
-  organization: MyString
-  contact: MyText
-  description: MyText
-  oncampus: false
-  islegacy: false
+  org: MyString
