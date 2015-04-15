@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     #@user = User.new(params[:user])    # Not the final implementation!
     @user = User.new(user_params)
     if @user.save
+       log_in @user
        flash[:success] = "Welcome to the ProjectApp"
        redirect_to @user
     else
