@@ -5,7 +5,7 @@ class ProjectTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-  	@p = Project.new(title: "Example Project", org: "CSE")
+  	@p = Project.new(title: "Example Project", organization: "CSE")
   end
 
   test "should be valid" do

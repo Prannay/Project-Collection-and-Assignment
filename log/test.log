@@ -5791,3 +5791,1268 @@ Processing by StaticPagesController#contact as HTML
   Rendered layouts/_header.html.erb (6.7ms)
   Rendered layouts/_footer.html.erb (0.4ms)
 Completed 200 OK in 117ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$vJeFM5ERx0YHQ7IfzXYeRONeEla45i.xxYiaKC3aG71Z/MpbIEqhO', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$f1IuZImbbU3Oh4HnYan4De0PZ2qkt3vQOhhSL4N0fO88XTQ2Nw8BO', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Ul06EeF3IzYiBEuUTvKRtOGN23g5rN7gnSfX7vEOvVscoZtLhmFBC', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$UNpmuZDyGEYl27LCMidYmeUz8G.T2vOlSO0JaXU1PAkKRe4oANqZi', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$EgNKuxmNQ7SRAZdCmSPHhOQTGzSWrcxNsxRSSlt5Zqdk8hoSAORxO', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Qmw9PdXI68ofrC90S7JEquDwed6hBBShJhtK4lmeQOxPNbslyeYyO', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$SbQJ9DjFjEEluBF0M1HNwON0KuT1mkUJPTHMUgKgnabYyV9a5LkeG', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$eY1veB8ahR88vwexOmtXT.LKAnILOfwHjkQZve0gEe.fREHPK8gr2', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$CPW1Dp4cegAMAqSq40TVlunqjIXOdkzFWQg7brXfzXHotQgea3cfS', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$bQcnQxsQjMk3OfSBgzz4A.qO86g4X5S1vUzw/aKEt6sPisYWPFzJe', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$kiw2dX5dmDgGYJiac/Y3Q.5LNmi3HA0mvwbksEZYyLUwNxrEx5Gym', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$xoEetHtGVKbOrj78XVtSm.H1h9QIn1m3/sSfPp2YkwBXxJyCnG03q', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ahFHfY7a9PmcSNDnrVcY.O137nsSozbxSOupVSPppOKzsAuPRjPIm', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$7hiwC8tDnr0B7KXX1lJ05uf/rrd6MwJo0IpKsIvmkynVKTm808Rb2', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$tQpr6.ClvCc9Jo6jXU7Alu8svQ/gp2QvtUngwePVcCshyPR23z2UW', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$as.jKckQlBZj.jIE4/v6Y.v88tZHiIZHL5yNT8DQu6cUOi9KL7QyK', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$z5bt5ek2JAgyj50Lo41olO70pee45WKZaVT4NnZ5jRfiMszoO.Di2', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$KHOt2Hf0z3c6b/ACBXFYBOdkAc7WzOZoCkwlZ04lK5aYgCv.OZWPa', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$iZwmnB8TPozqmP328G69V.LH27Q/uhEpm/nPs88Ek2soVADnH83IO', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$V6gzBgvrgeqHWT5BHVWyGOj2OGEZnQXsPk0d6QX2uJDe5Gs8YXsc.', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$9w5f4igri7PVUf.bi0uvIeImmfodoRWO/Wr/fkExMa8gpR2g0BAzm', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$KfaiqhbsCksBL.PUP.iEHuRAwvnPH4w3c3PuidJZe1CnkRvt9gnpS', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$sl08LfLS4xdUJGKSnOXpIuilpFJQG4DcmCbVHZJ/6zjBWpf3LNNuC', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$.QQDTHJQGBFIJ/vZLso4vOvYvs0G8jh3zod27PfCstcVVZTStOdJK', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$x4Qf/52IU69qIEvwSok/0OtqHkKgJQiJzIlEj40DFltOD9DhFpx0S', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$KyWQj..GTVvJHJmT0d.RsOQhtGpxU3t4SpaV.wgwKStgH1NAwXd5G', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Omqh2ZplRakr6ghuJg/ChOwKW2S5NxpBw8Gqrtt1Cw6ByocZNGO1W', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$EuLY.a6QUUHGVN.Rdq2SJ.om494OvKYoLAUoUuMIJAE1ckC565P6i', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$jDk7hLdTw6mbzi4MYTSVXuHhM1t/OKNyFovkZQPgvLcC2EObpyAp2', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$EzKqZDnNAidiBLiOPeTmNOdhUDR7nT6EZ1fa0ZzgUpo3IG4YVo8y6', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$aE7j/2XqcYouc8p8K9MBNunNuyPCO9kYxlO5tfr2D6egLiTRoDctK', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:55:19', '2015-04-16 03:55:19', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ofBrLbaz/g5uFrwrxnoQw.nlDkx7unTKx3Jy39xncK5uMkpelsRbu', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$aA1U..Pfc3iPLtCCAagKPuwpPn6SooycAgYHodVuhrjTF8qbYKlze', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$EC41FOTny.r8phQ4hG/fYe.aVUO07M8F6cWX2Fj.z2P7SR/1k3Sdq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$6r6UUR1eaaNbfcFX8y6oR.SkVXkR7G8a8xeW25m7MhCgiCuNLVskq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ppXfgQNgbyI/5BIZvSqRge4f1mrSLNHVUCBuAm7ZIqAXhkFgbDgta', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$NHERGzHoMvu8JT8fYzujYusRgyQHEpzVAA9OfEQDz0UnrMeI4Rrdq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$/twd/Fr0NuxdbUzdsXt/Fu4FkV8TWUTXSgsNP0fDH5VKyMPmk/zXy', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$LHjKaLxRnX/XMFkpv6ZU5.yS8GIuf7RM9AQChXmCvaqOwVRFMgKD6', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$5j.ItDuO6jjwNiVvz8fAuO4JG8R9anWJaXjiGAlKNSBVQet389Nsi', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$8khHzauqUkXG0ciREhbbHODlEKQbHq8eqc7TEiTsn6r5yPKNedLYO', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$YfBCHj.dvtfnkFrllexps.K/ECeP7vBN122T9PlNF0uDko3Piurne', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$RsBgcBON5GZwwpv5thFoGuAjafmcL.4SiAd7MyF2fvo0BMLnAttZe', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$8UXEVZsf2yD0g1EXJnawve8HrcIAFnsQLAxPN6K.oIVqpdK6uX4by', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$As3jbAyAzbMQS5GJo3k9revU1wqQLd/g6nCnjZDEwLU93H9kV0RCi', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$dC3sh6FT6ZZuAZPBV.ibV.VBe0XPAZDIDrq5qqvwcBIwtBdR7n9xK', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Yfk.KmvRSe0IuEMFTMW3G.KPgjRDxMefwVicZerK7A4CQYrgGfVgq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$XB0aAaTonLwVseiZTlPLAuycVvPCdZEBtFzMyWX5YvepR9pBWZMX.', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$vMkN0F7HQmUExzoS7CC6YusPe2kTIU3/hczDubmBurAHQZ4s70SOO', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$YGSu/Qsm1AXofOpE7q.NceC5FyAUxsXAV5iOGAESSwbWgEsf/vJh6', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$aMkhWjDWJUlzgR3al/FYDuPmM8mNZsfrE98eQ/6C4HwiygCfX.94G', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ZLUS2fWnDg1wBTIA4PpOKOXKxIWRE1ENAvOboLjNuz3C09uEL66py', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$pM/cKtYJDQuCBtFHdfcEA.MwFZHUsPl1GTFPW38iphre6V7GBqMeq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ELieWirBYShK7tldYJdQ0um5D6cjtCOLt9uQWFloho3vyhllhpy/i', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$tTYgsATNHYt33L7gIusIKectssLveUUyDHHEAl0c3ztpCn.YKQQUK', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$RKGwMjRsExh0GSUvuEP6b.FdfzJ2Zg6pyBqEYUn7a5Os3O8zVpN9u', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$N3nDgoEnPR.QCtj/KkUdPex7fYnw1dCquL0vpncSQ8oFOoD8BM8Oq', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$3lPHvAWsyvBlbiKGqMjx9.d69YoQIJioSqyLjDzHlLthZ5KDb05hy', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$FXf0HBDs/R7cDu1I1sRVoeJpqHnv.twXMtfqFZ2GPbsM6CWPvN4iG', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$lQRmqA7akxpFHRHtTx4bcuklQes1JfwQy.BLXk3uCl0XX.j8sOywW', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$5t.6Ro0p0xk1J1g6.TPi6OpxRdkeMa4sWAl2gVOpC9Od0jPstC7o6', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$bBeFNVOipXDZ2lDdrVlMVO5KkRyCU6EAzWS7dmSa69a9bDz6/brHm', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:15', '2015-04-16 03:57:15', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$2vKv/OfN6b8m3UUXzLsrT.HJwPs9ucG7sDkC78jiDiNcyz2i5ZQIu', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$FuNOAQ49LwIBbaeE8cg6ZOnJATZSqZYlkTwybTLzu1bWY..33Eh6a', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$YxpegU6QvvLn5idnxyjZeeSwTJ7ymGiviPzHCEbyaHzbkuJ3fPkiO', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$z3zclgKDmBt6LqXliiOKoOoaqQhhM1xG3ZXavAF772VblOHR0pBQe', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$A6JnHmq/yDQixfUzeidgwuN0ub3P25r81sQZANR1VPCjUb0Zwyse.', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$jo4x.UYJwpYyBEUAlnrx2.5lqFXojcUCBYXT55OX7Z6wBBB0gD2Xy', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$F/Euh6cQ4z2ZavUE3.iNiOvxZJLfnDfAxDx42SJmm7gvoiptZpU.K', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ov1iktLwRM1YQh8OD3JOdO4ehceUMTfDUap1C0lPrSUwm2TUifb4S', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$9FC3xBGgDr.ZXKbb7yLDLuQLHzw12h7GdmX5qsN0l1v3V.CZqipPK', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ZQHDJfbZt1eywmQ1WHWQAe5b30.z1oFnsweeNHm8paUsFzDi/lu5S', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$LobnPour.CdWwjHXN/kxNebkQ1OJ3XdYgf5x4cr.UlmeLVrn6qdjG', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$NC62EI/jhxfNOccInw.vSe3lKEwdU/S8N31UuWNJU/LXTvyIbS7qa', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$yCze2R2wQmNwzUr15cxkw.bqyHVMt1KgUzJlxHA1imojURuox2XTq', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$U/MVsaCnRTyOc/JW8ut3Det4G1Thwkatu.tNvJgrsOZSRagLovl9S', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$8FctISMID1OfnfV28R.d/ekRYPs9vestiYSv/bQqtdEOZfXrc11z.', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$VDmnVrdmmdppXTbOlU4LyunwD7sGhP2YRnD4diRY5OJyO..t3gp3W', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$KTjHD8DdxijlavYOB3CPduNa3nfOFNeo4UVvoO6HyFs/.Ew5V6Yxm', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$JCgO2Hnz0x2gFql7sQEnc.qsipy0Z0/vT6FVgfKYx/MIw5rNGJNce', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$n3Gys5vHEen0/AQGke33iOH4M/xBNt6yGCEm3k0NqpLPSdBWnKxji', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:57:59', '2015-04-16 03:57:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$8VhHozNjiDPf/tnHqu0/IujoCoBr/rYKigsmLeQghDpe.qdA46xuC', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$kdz4MVcOQIEo4AYYo0D0EeP7GdZ3EaafWmqL0LViOm8g00APRlfDe', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$C8USSP4cd5xftNMohWxnvu7okkjCHuPvzajmk73kfKZGu1.Da3fGW', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$yqQGWmEkpDewKWD26jYOPO0bGfAM0bO82hLZ1RY8JBHDUOawQiDTa', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$VeeWOUgSVGOcO4wZhuF4L.zSC3jj0IA8CD4JMVSgYrqgsBFCo3Rle', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$QIOAeJMSTfHzQ/dUuNZNv.2M6DuToexwCgdgGZnAUDC/tVj4btiKi', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$BZV.D3Ty/6QJI0nDs4JkM.0QGytp7UkDtV2dPju3UmCwH6sWZ.xv2', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$0QGjIc1sfxVEvRtgdAdEQuQsV1ahtJeIV4bXLyFKTrOkF/Z0p5I8O', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$0L2.JL/4/zeTPTs6UJBADutpzzI0oiZC/urKo8Fk27oZGfETk8FNO', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$M8qZ971dlwgPPhihPIGLK.AcjCCjfeKLql922XoZDPoAwQD.pfuua', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$6YwkTxf.ClXYpA2v1KgPyuWeV3HU71eRAtZjKseJSQMM5Nq8U.HSO', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$j7eoak5KgTPOLPkzeRmLj.68cCJivNgOBAiYcmhtvKdlFJfE5H2BK', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:58:00', '2015-04-16 03:58:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$XZg7Y9Sccy0nt6uMqLCR7ebiqDLxEY5EF7oQenH8Ur5A.a/tKfY16', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$e7FQKIfBg1Qrh.9Z4J9aTuYqK6zRUtL6JBYJvZoscdXEJSPU5OizW', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$nl8eTLquIkiKjGrOSYzfXO/sibwDw.CkJIwaSO6UMvqt5aIR04g9u', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ZQSYs.N3Vz26FLyZGtOzTu4bo.dUYTiZXisvUdwDU2iv9YGfs34C2', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Dgp02TKP.Eva7YLZyneLg.5DYG6KjjVQ5vcUKs6zhO2wB5nnMAwGC', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ojLOw2y6EggZz4Z789VX1e0fuixGjwQvCkBTvCKlf8fIV6HdnqGDu', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$9R.byoUZzEZX.IP3HV8BJ.IbyO42LgxiEhNtcpQV/sLBkyA083Fni', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$G56GbI9cL/57mSFDyX2du.atQ6B8hfbiMOrEgcA6EWlFcP.JT5b1i', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$5nzuSNePCOOpe2KLKzz/I.qWKaF70CnFb2ucFMf4fgn7gQbnrCClS', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Ec60QvaDCHIb2vh6BgwYZOAYeUi8YeTCdAvIVCpcYbCvUiswNKcZa', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$59UD3eGUDac117ToBZ1O8Og3CKvyWhf30JYWqAO8htiODoyXVK6WW', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$1Px.2/1i.WPFUY9asDJcUuTC9srBE70tmB6frDm2eL62Sja741XTi', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$J0foLTBkK7zcM1IihCFg6.bXMwAWl36VpZmGJq8udPGes6.nDuQNq', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$aqsP2WIDymqFPoDkBs7OjurbcXKdaAVPXe1slPT6/ArNBnr8ry252', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$pZBkQWoA9zbt/7Rwx6EQW.F5hHXi43MGbTZ/5SornjFj6wuqI.cU6', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$XA0KVadSgsqZN4bP4LvvdOUCpVJQNJC0wfWpMOmRp656S0nS3mgyW', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$1JLR.I6Vt/ywf8lq.S4Pe.NgLmPnGewwapbghPWmd51qahla70hPy', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$5dISPfQEeXcBji7R.CX7weZNFGfsvAkDOo4d815NBP4mBznLESi6S', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ZnTQeAxDokzRTgMMvihhQOusg1LcHyKW81uLlG/opuwoH9Bp8kRDm', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$lShoWB1whu8rBmC8vFxKJun3D0WS2wN1q.d/hDo9vC6MSj3OnwzFu', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ZzDs4veMeEcok2ErTzKJsu58LrsaBlIgLHAizVQ6TSV4rNYYKCRQS', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$p5oD2OvNcxozEiZJYDdp6udDs1x6YfJJaqLxoccRiULjHirdxTGde', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$rb17zdVouqW4qsfvDFwGcOGbWvuCxAi6j4saOlMUSk4qMSxD488je', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$6bD9NEDWdcyu6ZGXwumkReYbDlewyqz8jY9xNZMt/1Tg87xrSJnJS', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$/i9quZeuUGO6JbfABXJMR.jYYOpv.bicIzjNRfzlBoIUQH2OnYVo.', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$KN2pv2i.v7joCYnBMVUHGOf7HK9Dh4MiT4aU0gwekJ.p0HgwXdOwy', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$Fb4n9MDkdnUd2.4wIToT.uKwvlxJYE5fxpOEN6rxOZjGO1p.ErWJG', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$UPwpXsWtICcLATif7W0v3OsVvhskOBENSLrkq0vs53jb9YkaHhgKq', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$s1cBZhxs5DULZfkR7tKiauKQ51ekZixMoW.YIEqMtUVe8TGOSO0hu', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$ML6jh3kiQ73xrBUhI6gsr.XHSGgyfL.EJSxGGzrX4aKLGtQhiS5xy', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$GukPRba5q5jlThFc5vy9FOe.4m4x5mIeg9HjbKZTu1qOrX8yDkAvG', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+SQLite3::SQLException: table projects has no column named org: INSERT INTO "projects" ("title", "org", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-04-16 03:59:18', '2015-04-16 03:59:18', 980190962)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$OPQ/gRN9dlEiBD4PF6zdSe8xEupBcU0kUpU/sjKSHgQWqal9ejpBu', '2015-04-16 04:00:39', '2015-04-16 04:00:39', 762146111)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "projects"[0m
+  [1m[35m (113.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2015-04-15 23:00:39 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 5918ms (Views: 5904.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UsersLoginTest: test_login_with_remembering
+-------------------------------------------
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+Started POST "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "michael@example.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$UH3zVGVYbzhdRRII44v2uO.UNlwT9AgNR5r2zp/UME4VRyhiDnXAu"], ["updated_at", "2015-04-16 04:00:45.692164"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+UsersLoginTest: test_login_without_remembering
+----------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started POST "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "michael@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "michael@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+Started GET "/users/762146111" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+UsersLoginTest: test_login_with_valid_information_followed_by_logout
+--------------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "michael@example.com"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+Started GET "/users/762146111" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------
+UsersLoginTest: test_login_with_invalid_information
+---------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", ""]]
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2015-04-15 23:00:45 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------
+SessionsHelperTest: test_current_user_returns_right_user_when_session_is_nil
+----------------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$dCx0LSlnpwq5EIqpf47lJ.xvR3w/Obf92zzm4oVCR3WWJAOI.wife"], ["updated_at", "2015-04-16 04:00:45.881626"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------
+SessionsHelperTest: test_current_user_returns_nil_when_remember_digest_is_wrong
+-------------------------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_digest", "$2a$04$aayT8c8WLhS9QUbXCKuQQu6Ivxs5AG0SQaBR/LB3Qv4VnWbijt5MC"], ["updated_at", "2015-04-16 04:00:45.890069"], ["id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$xgBt/8HcbfAoTBByqKaqtOGde.IH/4EQXso15f1KfJKpdloOVOxa."], ["updated_at", "2015-04-16 04:00:45.894564"], ["id", 762146111]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+ProjectsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by ProjectsController#new as HTML
+  Rendered projects/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('Foo@ExAMPle.CoM') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "foo@example.com"], ["password_digest", "$2a$04$XqH.nUCQrjl9zMlMMBUF4.3mM2PbOALJ7BjJobaH6X8OXG3G4jSqa"], ["created_at", "2015-04-16 04:00:45.976854"], ["updated_at", "2015-04-16 04:00:45.976854"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+UserTest: test_authenticated?_should_return_false_for_a_user_with_nil_digest
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('     ') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user_at_foo.org') LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user.name@example.') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar_baz.com') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('foo@bar+baz.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$ZlAgPW6KJvIp.yfEZ4C2GuIvVLXMc3tnNTUdVqXB3Di7xFlY53Twy"], ["created_at", "2015-04-16 04:00:46.017031"], ["updated_at", "2015-04-16 04:00:46.017031"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------
+UserTest: test_email_validation_should_accept_valid_addresses
+-------------------------------------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@foo.COM') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('A_US-ER@foo.bar.org') LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('first.last@foo.jp') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('alice+bob@baz.cn') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------
+ProjectTest: test_org_should_be_present
+---------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+ProjectTest: test_title_should_be_present
+-----------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------
+ProjectTest: test_should_be_valid
+---------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-04-15 23:00:46 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2015-04-15 23:00:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+UsersSignupTest: test_valid_signup_information
+----------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-04-15 23:00:46 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2015-04-15 23:00:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$A4L3zfIP1GOXbu3.1hrV7u.RSEDJKlKOfwBFczugsAbgEDCfNLAF6"], ["created_at", "2015-04-16 04:00:46.143689"], ["updated_at", "2015-04-16 04:00:46.143689"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146112
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/users/762146112" for 127.0.0.1 at 2015-04-15 23:00:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146112"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
