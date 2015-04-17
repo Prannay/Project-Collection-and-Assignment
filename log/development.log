@@ -19321,3 +19321,1011 @@ Processing by SessionsController#new as HTML
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 117ms (Views: 116.5ms | ActiveRecord: 0.0ms)
 >>>>>>> 87e9a6f55289aaafeff6712f7ccaab4dee6b78a2
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:29:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (6.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 658ms (Views: 644.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:29:32 -0500
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-16 20:29:39 -0500
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2015-04-16 20:29:42 -0500
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 139ms (Views: 138.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-04-16 20:29:45 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2015-04-16 20:29:54 -0500
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-16 20:29:55 -0500
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 129ms (Views: 128.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-04-16 20:29:56 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 122.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-16 20:29:58 -0500
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:30:11 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/add_project" for 127.0.0.1 at 2015-04-16 20:30:12 -0500
+Processing by ProjectsController#new as HTML
+  Rendered shared/_project_error_messages.html.erb (2.6ms)
+  Rendered projects/new.html.erb within layouts/application (74.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 225ms (Views: 214.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-04-16 20:30:15 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 168ms (Views: 149.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-04-16 20:30:18 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2015-04-16 20:30:20 -0500
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 133.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-04-16 20:30:22 -0500
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-04-16 20:30:23 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:30:27 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 130.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:40:03 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 151ms (Views: 150.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-16 20:40:06 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 129.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-16 20:40:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/vddzodxYYci9hCh5QEUA5KffmI85d8K6B6Ud1Aph1RwnDVy0LIeOMRawbg/LIhGA5aAZ2jxZ/G5dRVcU/+YGg==", "session"=>{"email"=>"jasmeet13n@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jasmeet13n@tamu.edu"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 105ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-04-16 20:40:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 142ms (Views: 139.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:11 -0500
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:40:14 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 132ms (Views: 130.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYMZX01Vg9InYQgOiLmIn9h+3AKucgfnH5B344HREtQL6HHjGpb8bcHN2RdSlBTaSXciB/pmvxxO+/bIggcNmg==", "user"=>{"name"=>"Jasmeet Singh 1", "email"=>"jasmeet13n@tamu.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('jasmeet13n@tamu.edu') AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Jasmeet Singh 1"], ["updated_at", "2015-04-17 01:40:18.199157"], ["id", 1]]
+  [1m[35m (120.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 145ms (ActiveRecord: 121.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 146ms (Views: 145.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:18 -0500
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:40:21 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P4BLlFxzw8JHCt0zFdCKNSdR3vYeHMPEFSIu6RyX8Vex6yMoC7C8faGmDCrP/RZwtlgg80oIez9ESa/CH0HuGQ==", "user"=>{"name"=>"Jasmeet Singh 1", "email"=>"jasmeet13n@tamu.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('jasmeet13n@tamu.edu') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 134ms (Views: 132.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:30 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-04-16 20:40:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:40:35 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 139ms (Views: 135.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yg60OxL2/2kByRj1OOZWK8CjFNfbXh5vLe3Kw3brgYJEZdyHRTWA1udlyeziy8puUarq0o9KppR8hkvodT2ezA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:37 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 148ms (Views: 146.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:43 -0500
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 126.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:44 -0500
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-16 20:40:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iw4QYQJ0Lndpy0ItygI6VotX3jNiFHavZPc6H/7JP5AFZXjdVbdRyI9nkzQQL6YTGl4gNjYAzlQ1nLs0/R8g3g==", "session"=>{"email"=>"jasmeet13n@tamu.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jasmeet13n@tamu.edu"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/edit
+Completed 302 Found in 85ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:40:48 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/edit.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 136ms (Views: 134.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:49 -0500
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-04-16 20:40:51 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bCYhjwl8d2vno45BUDFzciVcnopDOMFKp6k5rcxR2H7iTUkzXr8I1AEPX1iKHO83tFVgjxcsebH2wriGz4fHMA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:40:51 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 130.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:40:52 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-04-16 20:40:53 -0500
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 126ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-04-16 20:41:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Tf6j7jpUdjGQgZdMCRsHA/WgPdcuPYjms06fnHJzOxXXJIz7youZyDu10TqCfBZnt9+8gisTtjLprtVch/Tog==", "user"=>{"name"=>"Jasmeet Singh 2", "email"=>"jasmeetiiit@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('jasmeetiiit@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Jasmeet Singh 2"], ["email", "jasmeetiiit@gmail.com"], ["password_digest", "$2a$10$wTyPFxNMZjdUmDoY6vL/tOo7IDUuSeuTT710oFAiHLeWtzO2alWHS"], ["created_at", "2015-04-17 01:41:00.783113"], ["updated_at", "2015-04-17 01:41:00.783113"]]
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 202ms (ActiveRecord: 111.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-04-16 20:41:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 124ms (Views: 122.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:01 -0500
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2015-04-16 20:41:06 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/edit.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 132.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:09 -0500
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-04-16 20:41:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dzddS4tYE8/9i+MZZXpJm7+81menAOX9kwoDdUzwlJf5XDX33JtscBsnMgC/V9XeLrUoYvMUXQbCYYJeTyaL2Q=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-16 20:41:11 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom-5abda4109f9d81027c61d34975420c4c.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/projects-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/projects-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/application-52748c408540c4b0e5c7fcc9b0e999c1.css?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/application-54813782a825e6384ee029453c2f2071.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-04-16 20:41:12 -0500
