@@ -1,1 +1,36 @@
-<%= @project.title %>, <%= @project.organization %>
+<% provide(:title, 'Project Details') %>
+<h1>Project Details</h1>
+
+<% if current_user.admin? %>
+<h2><%= link_to "Edit", edit_project_path(@project) %>
+  | <%= link_to "Delete", @project, method: :delete,
+                                data: { confirm: "You sure?" } %>
+</h2>
+<% end %>
+
+<table class="table">
+  <tr>
+  	<th>Title</th>
+  	<td><%= @project.title %></td>
+  </tr>
+  <tr>
+  	<th>Organization</th>
+  	<td><%= @project.organization %></td>
+  </tr>
+  <tr>
+  	<th>Contact</th>
+  	<td><%= @project.contact %></td>
+  </tr>
+  <tr>
+  	<th>Description</th>
+  	<td><%= @project.description %></td>
+  </tr>
+  <tr>
+  	<th>On Campus</th>
+  	<td><%= @project.oncampus %></td>
+  </tr>
+  <tr>
+  	<th>Is Legacy</th>
+  	<td><%= @project.islegacy %></td>
+  </tr>
+</table>

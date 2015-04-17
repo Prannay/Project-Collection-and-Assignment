@@ -1,11 +1,23 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-</div>
+<% provide(:title, 'User Details') %>
+<h1>User Details</h1>
+<h2>  <% if current_user.admin? && !current_user?(@user) %>
+	<%= link_to "Edit", edit_user_path(@user) %>
+    | <%= link_to "Delete", @user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</h2>
+
+<table class="table">
+  <tr>
+  	<th>Name</th>
+  	<td><%= @user.name %></td>
+  </tr>
+  <tr>
+  	<th>Email ID</th>
+  	<td><%= @user.email %></td>
+  </tr>
+  <tr>
+  	<th>Gravatar</th>
+  	<td><%= gravatar_for @user %></td>
+  </tr>
+</table>
