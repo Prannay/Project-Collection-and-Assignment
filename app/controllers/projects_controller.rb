@@ -1,10 +1,17 @@
 class ProjectsController < ApplicationController
-  def new
-  	@project = Project.new
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
+  before_action :admin_user,     only: [:index, :edit, :update, :destroy]
+
+  def index
+    @projects = Project.paginate(page: params[:page])
+  end
+  
+  def show
+    @project = Project.find(params[:id])
   end
 
-  def show
-  	@project = Project.find(params[:id])
+  def new
+  	@project = Project.new
   end
 
   def create
@@ -16,7 +23,27 @@ class ProjectsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @project = Project.find(params[:id])
+  end
   
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:success] = "Project details updated"
+      redirect_to @project
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Project.find(params[:id]).destroy
+    flash[:success] = "Project deleted"
+    redirect_to projects_url
+  end
+
   private
       def project_params
       params.require(:project).permit(:title, :organization, :contact, :description, :oncampus, :islegacy)

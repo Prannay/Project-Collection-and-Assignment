@@ -1,0 +1,32 @@
+<% provide(:title, 'Add a Project') %>
+<h1>Add a Project</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@project) do |f| %>
+
+    <%= render 'shared/project_error_messages' %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form_control" %>
+ 
+    <%= f.label :organization %><br>
+    <%= f.text_field :organization, class: "form_control" %>
+ 
+    <%= f.label :contact %><br>
+    <%= f.text_area :contact, class: "form_control" %>
+ 
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form_control" %>
+ 
+    <%= f.label :oncampus %><br>
+    <%= f.check_box :oncampus, class: "form_control" %>
+ 
+    <%= f.label :islegacy %><br>
+    <%= f.check_box :islegacy, class: "form_control" %>
+    
+    <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
