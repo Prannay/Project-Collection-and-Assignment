@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy, :approve, :unapprove, :approved, :unapproved]
-  before_action :admin_user,     only: [:index, :edit, :update, :destroy, :approve, :unapprove, :unapproved]
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy, :approve, :unapprove, :approved, :unapproved, :toggle]
+  before_action :admin_user,     only: [:index, :edit, :update, :destroy, :approve, :unapprove, :unapproved, :toggle]
 
   def index
     @title = "All Projects"
@@ -94,6 +94,16 @@ class ProjectsController < ApplicationController
     else
       flash[:danger] = "Project does not exist"
       redirect_to root_url
+    end
+  end
+
+  def toggle
+    @project = Project.find(params[:id])
+    @project.toggle(:approved)
+    @project.save
+    respond_to do |format|
+      format.html { redirect_to projects_url }
+      format.js
     end
   end
 

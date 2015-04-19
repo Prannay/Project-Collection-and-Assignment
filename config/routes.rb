@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :projects do
     member do
       get :approve, :unapprove
+      patch :toggle
     end
   end
   get 'approved_projects' => "projects#approved"

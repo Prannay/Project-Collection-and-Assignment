@@ -1,0 +1,3 @@
+<% linkvalue = @project.approved? ? "Unapprove" : "Approve" %>
+$("#toggle_switch_<%= @project.id %>").html("<%= linkvalue %>")
+console.log

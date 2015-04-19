@@ -1,14 +1,14 @@
 <li>
   <%= link_to project.title, project %>
   <% if current_user.admin? %>
-  	| 
-  	<% if project.approved? %>
-  		<%= link_to "Unapprove", unapprove_project_path(project) %>
-  	<% else %>
-  		<%= link_to "Approve", approve_project_path(project) %>
-  	<% end %>
+      <% linkvalue = project.approved? ? "Unapprove" : "Approve" %>
+  	| <%= link_to linkvalue, "#", :onclick=>"$(\'#edit_project_#{project.id}\').submit()", :id => "toggle_switch_#{project.id}" %>
     | <%= link_to "Edit", edit_project_path(project) %>
     | <%= link_to "Delete", project, method: :delete,
                                      data: { confirm: "You sure?" } %>
+    <%= form_for(project, url: toggle_project_path(project), remote: true) do |f| %>
+      <%= hidden_field_tag :id, project.id %>
+      <%= f.submit "Submit", :class => "hidden" %>
+    <% end %>
   <% end %>
 </li>
