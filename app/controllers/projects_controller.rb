@@ -109,7 +109,7 @@ class ProjectsController < ApplicationController
 
   private
       def project_params
-        if current_user.admin?
+        if current_user && current_user.admin?
           params.require(:project).permit(:title, :organization, :contact, :description, :oncampus, :islegacy, :approved)
         else
           params.require(:project).permit(:title, :organization, :contact, :description, :oncampus, :islegacy)
