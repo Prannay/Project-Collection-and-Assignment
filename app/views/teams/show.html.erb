@@ -34,7 +34,13 @@
     <td>
       <ol>
       <% @members.each do |m| %>
-        <li><%= m.name %></li>
+        <li>
+          <% if current_user.admin? %>
+            <%= link_to m.name, m %>
+          <% else %>
+            <%= m.name %>
+          <% end %>
+        </li>
       <% end %>
       </ol>
     </td>
