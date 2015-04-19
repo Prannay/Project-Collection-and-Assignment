@@ -1,4 +1,4 @@
-<li>
+<li <%= "id=listitemproject_#{project.id}" %> >
   <%= link_to project.title, project %>
   <% if current_user.admin? %>
       <% linkvalue = project.approved? ? "Unapprove" : "Approve" %>
