@@ -4,8 +4,8 @@
   <% if logged_in? %>
   <b>Howdy  <%= current_user.name%> !! </b>
 <% else %> 	        
-  <h2>
-  <h2>Welcome to the Project Submission and Assignment  Application</h2>
+
+  <h1>Welcome to the Project Submission and Assignment  Application</h1>
     If you are a new student, please sign up.
   </h2>
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
