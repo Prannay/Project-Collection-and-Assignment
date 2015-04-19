@@ -33,4 +33,10 @@
   	<th>Is Legacy</th>
   	<td><%= @project.islegacy %></td>
   </tr>
+  <% if current_user.admin? %>
+  <tr>
+    <th>Approved</th>
+    <td><%= @project.approved %></td>
+  </tr>
+  <% end %>
 </table>

@@ -1,6 +1,12 @@
 <li>
   <%= link_to project.title, project %>
   <% if current_user.admin? %>
+  	| 
+  	<% if project.approved? %>
+  		<%= link_to "Unapprove", unapprove_project_path(project) %>
+  	<% else %>
+  		<%= link_to "Approve", approve_project_path(project) %>
+  	<% end %>
     | <%= link_to "Edit", edit_project_path(project) %>
     | <%= link_to "Delete", project, method: :delete,
                                      data: { confirm: "You sure?" } %>
