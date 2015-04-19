@@ -9,9 +9,14 @@ class RelationshipsController < ApplicationController
   	@team = Team.find_by(name: params[:relationship][:name])
   	if @team 
   	  if @team.code == params[:relationship][:code]
-  	    current_user.relationships.create(team_id: @team.id)
-        flash[:success] = "Team joined successfully"
-  	    redirect_to @team
+        if Relationship.find_by(user_id: current_user.id, team_id: @team.id)
+          flash[:warning] = "You are already a member"
+          redirect_to @team
+        else
+  	      current_user.relationships.create(team_id: @team.id)
+          flash[:success] = "Team joined successfully"
+  	      redirect_to @team
+        end
   	  else
   	  	flash.now[:danger] = "Code is wrong"
   	  	render 'new'
