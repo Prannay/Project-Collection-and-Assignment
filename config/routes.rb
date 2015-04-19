@@ -26,6 +26,12 @@ Rails.application.routes.draw do
   get 'approved_projects' => "projects#approved"
   get 'unapproved_projects' => "projects#unapproved"
 
+  resources :teams
+
+  resources :relationships, only: [:destroy]
+  get 'jointeam' => 'relationships#new'
+  post 'jointeam' => 'relationships#create'
+  delete 'leaveteam' => 'relationships#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

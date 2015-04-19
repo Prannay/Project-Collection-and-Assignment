@@ -1,0 +1,42 @@
+<% provide(:title, 'Team Details') %>
+<h1>Project Details</h1>
+
+<% if @team.is_leader?(current_user) || current_user.admin? %>
+<h2><%= link_to "Edit", edit_team_path(@team) %>
+  | <%= link_to "Delete", @team, method: :delete,
+                                data: { confirm: "You sure?" } %>
+</h2>
+<% end %>
+<% if current_user.is_member?(@team) && !@team.is_leader?(current_user) %>
+  <% r = Relationship.find_by(user_id: current_user.id, team_id: @team.id) %>
+    <h2><%= link_to "Leave Team", r, method: :delete,
+                                data: { confirm: "You sure?" } %>
+    </h2>
+<% end %>
+<table class="table">
+  <tr>
+  	<th>Name</th>
+  	<td><%= @team.name %></td>
+  </tr>
+
+  <tr>
+    <th>Created by</th>
+    <td><%= @team.user.name %></td>
+  </tr>
+
+  <tr>
+    <th>Code</th>
+    <td><%= @team.code %></td>
+  </tr>
+
+  <tr>
+    <th>Team Members</th>
+    <td>
+      <ol>
+      <% @members.each do |m| %>
+        <li><%= m.name %></li>
+      <% end %>
+      </ol>
+    </td>
+  </tr>
+</table>

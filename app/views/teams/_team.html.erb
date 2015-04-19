@@ -1,0 +1,8 @@
+<li>
+  <%= link_to team.name, team %>
+  <% if current_user.admin? %>
+	| <%= link_to "Edit", edit_team_path(team) %>
+    | <%= link_to "Delete", team, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>

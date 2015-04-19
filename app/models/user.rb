@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :teams, dependent: :destroy
+  has_many :relationships, dependent: :destroy
+  has_many :memberof, through: :relationships, source: :team
+  
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
@@ -37,6 +41,25 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
-  
+
+  def join_team(team)
+    relationships.create(team_id: team.id)
+  end
+
+  def leave_team(team)
+    relationships.find_by(team_id: team.id).destroy
+  end
+
+  def is_member?(team)
+    memberof.include?(team)
+  end
+
+  def is_member_of
+    r = relationships.find_by(user_id: self.id)
+    if r
+      Team.find_by(id: r.team_id)
+    end
+  end
+
 end
   
