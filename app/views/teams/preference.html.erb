@@ -1,0 +1,15 @@
+<% provide(:title, @title) %>
+<h1><%= @title %></h1>
+
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+<ul class="projects">
+	<%= render 'preference_title' %>
+  <% @projects.each do |project| %>
+  	<%= render 'preference_selector', :project => project, :team => @team %>
+  <% end %>
+</ul>
+
+</div>
+</div>
