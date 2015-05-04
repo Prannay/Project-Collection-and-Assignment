@@ -4,7 +4,7 @@ class AssignmentsController < ApplicationController
 
   def assign
   	@projects = Project.where("approved = ?", true)
-  	@prefs = Preferences.all
+  	@prefs = Preference.all
 
   	# Create Graph Here
 
