@@ -6,6 +6,10 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Add Project", add_project_path %></li>
         <% if logged_in? %>
+          <% team = current_user.is_member_of %>
+          <% if team.is_leader?(current_user) %>
+            <li><%= link_to "Project Prference", preference_team_path(team) %></li>
+          <% end %>
           <% if current_user.admin? %>
             <li><%= link_to "Users", users_path %></li>
              <li class="dropdown">
