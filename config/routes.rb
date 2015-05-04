@@ -23,15 +23,24 @@ Rails.application.routes.draw do
       patch :toggle
     end
   end
+
   get 'approved_projects' => "projects#approved"
   get 'unapproved_projects' => "projects#unapproved"
 
   resources :teams
 
+  resources :teams do
+    member do
+      get :preference
+    end
+  end
+
   resources :relationships, only: [:destroy]
   get 'jointeam' => 'relationships#new'
   post 'jointeam' => 'relationships#create'
   delete 'leaveteam' => 'relationships#destroy'
+
+  resources :preferences, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

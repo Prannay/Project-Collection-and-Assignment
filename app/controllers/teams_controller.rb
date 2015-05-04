@@ -2,6 +2,19 @@ class TeamsController < ApplicationController
   before_action :logged_in_user, only: [:index, :new, :create, :destroy]
   before_action :valid_viewer, only: [:show]
   before_action :team_leader_or_admin,   only: [:destroy]
+  before_action :team_leader, only: [:preference]
+
+  def preference
+    @team = current_user.is_member_of
+    if @team
+      @title = "Preference Selector"
+      @projects = Project.where("approved = ?", true)
+      render 'preference'
+    else
+      flash[:warning] = "You are not yet part of any team"
+      redirect_to current_user
+    end
+  end
 
   def index
     if current_user.admin?
@@ -67,6 +80,11 @@ class TeamsController < ApplicationController
  private
     def team_params
       params.require(:team).permit(:name)
+    end
+
+    def team_leader
+      @team = Team.find(params[:id])
+      redirect_to root_url unless @team.is_leader?(current_user)
     end
 
     def team_leader_or_admin
