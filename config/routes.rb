@@ -41,6 +41,8 @@ Rails.application.routes.draw do
   delete 'leaveteam' => 'relationships#destroy'
 
   resources :preferences, only: [:create]
+
+  get 'assign' => 'assignments#assign'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
