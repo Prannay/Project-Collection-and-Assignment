@@ -3,6 +3,9 @@ class Team < ActiveRecord::Base
   has_many :relationships, dependent: :destroy
   has_many :members, through: :relationships, source: :user
 
+  has_many :preferences, dependent: :destroy
+  has_many :prefers, through: :preferences, source: :project
+
   validates :name, presence: true, uniqueness: true
   validates :user_id, presence: true
 
