@@ -8,7 +8,7 @@
         <% if logged_in? %>
           <% team = current_user.is_member_of %>
           <% if team.is_leader?(current_user) %>
-            <li><%= link_to "Project Prference", preference_team_path(team) %></li>
+            <li><%= link_to "Project Preference", preference_team_path(team) %></li>
           <% end %>
           <% if current_user.admin? %>
             <li><%= link_to "Users", users_path %></li>
