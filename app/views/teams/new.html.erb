@@ -1,42 +1,17 @@
 <% provide(:title, 'Create Team') %>
-<h1>CreateYour Team</h1>
-<center>
-<table>
+<h1>Create a Team</h1>
 
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
     <%= form_for(@team) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-    <tr><td>
-  
-  </td></tr>
-
-     <tr><td><b>
-    <%= form_for(@team) do |f| %>
-      
-       </b></td> </tr>
-
-      <tr><td><b>Please enter your Team Name </b></td></tr>
-      <tr><td><%= f.text_field :name, class: 'form-control' %></td> </tr>
-      
-      <tr><td>
-      <%= f.submit "Create Team", class: "btn btn-primary" %>
-      <%= render 'shared/error_messages', object: f.object %>
-      </td></tr>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <div class="col-md-6 col-md-offset-3">
         <%= f.submit "Create team", class: "btn btn-primary" %>
       </div>
     <% end %>
- 	
-</table>
-</center>
-
-
- <br/><br/>
-<b>Naming Convention for Team Names: </b> <br/>
-i) Name should not start with a number <br/>
-ii) Name should not contain the word "ruby"  or "rails"
-
-
+  </div>
+</div>
