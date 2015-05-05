@@ -21,6 +21,8 @@ class AssignmentsController < ApplicationController
     @count, @matching = project_assignment(@graph)
 
     #Store matching in Assignment model
+
+    @assignments = Assignment.all
     
   end
 
