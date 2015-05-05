@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504072229) do
+ActiveRecord::Schema.define(version: 20150505023929) do
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "team_id"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "assignments", ["project_id"], name: "index_assignments_on_project_id"
+  add_index "assignments", ["team_id"], name: "index_assignments_on_team_id"
 
   create_table "preferences", force: :cascade do |t|
     t.integer  "team_id"
