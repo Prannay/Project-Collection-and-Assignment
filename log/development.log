@@ -22531,3 +22531,107 @@ Started GET "/download" for 165.91.13.236 at 2015-05-05 23:16:08 +0000
 Processing by AssignmentsController#download as HTML
   [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   [1m[35mAssignment Load (0.5ms)[0m  SELECT "assignments".* FROM "assignments"
+
+
+Started GET "/" for 165.91.13.236 at 2015-05-05 23:32:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (134.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mRelationship Load (0.6ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (49.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 2566ms (Views: 2563.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/download" for 165.91.13.236 at 2015-05-05 23:33:02 +0000
+Processing by AssignmentsController#download as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAssignment Load (0.3ms)[0m  [1mSELECT "assignments".* FROM "assignments"[0m
+  Rendered text template (0.0ms)
+Sent data output.csv (7.1ms)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/download" for 165.91.13.236 at 2015-05-05 23:33:24 +0000
+Processing by AssignmentsController#download as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAssignment Load (0.2ms)[0m  [1mSELECT "assignments".* FROM "assignments"[0m
+  Rendered text template (0.0ms)
+Sent data output.csv (0.7ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 165.91.13.236 at 2015-05-05 23:33:30 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vxXAXD8frwLvjYycdJ3Svo908qUizuN59w33LyOcxnm4E1jtS50/7baoQm6AGp5fmqQVhxV2yJFxXsoHhkAyHw=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://rails-tutorial-prannayjain.c9.io/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.13.236 at 2015-05-05 23:33:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1303ms (Views: 1302.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.13.236 at 2015-05-05 23:33:36 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (403.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1772ms (Views: 1771.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 165.91.13.236 at 2015-05-05 23:33:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dIwCAwiKfD0NB99q5I2Q85Xr938kkTqRO0A/JhSUAoNzipqyfAjs0lQiEZgQCtwSgDsQXRMpEXm9EwIOsUj25Q==", "session"=>{"email"=>"prannay@xyz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "prannay@xyz.com"]]
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1229ms (Views: 1226.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 165.91.13.236 at 2015-05-05 23:33:53 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (3.3ms)
+  Rendered users/new.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1271ms (Views: 1270.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 165.91.13.236 at 2015-05-05 23:34:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zyrccx0FEdKntveTLimvNmEbKK6UcO0yjQOlWHTw6hjILETCaYeBPf6TOWHaruPXdMvPjKPIxtoLUJhw0Swefg==", "user"=>{"name"=>"prannay", "email"=>"prannay@xyz.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('prannay@xyz.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "prannay"], ["email", "prannay@xyz.com"], ["password_digest", "$2a$10$HXZTdY2IrUG1SPKWHOoj5uYGnQld5htWQeBfHBaWPnUIrETYyWvNW"], ["created_at", "2015-05-05 23:34:12.915034"], ["updated_at", "2015-05-05 23:34:12.915034"]]
+  [1m[36m (27.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://rails-tutorial-prannayjain.c9.io/users/102
+Completed 302 Found in 125ms (ActiveRecord: 28.0ms)
+
+
+Started GET "/users/102" for 165.91.13.236 at 2015-05-05 23:34:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"102"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "102"]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.2ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 102], ["user_id", 102]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1319ms (Views: 1315.2ms | ActiveRecord: 0.7ms)
