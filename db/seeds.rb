@@ -20,18 +20,62 @@ User.create!(name:  "Jasmeet Singh",
                password_confirmation: password)
 end
 
-50.times do |n|
+30.times do |n|
   title  = Faker::Company.catch_phrase
   organization = Faker::Company.name
   contact = Faker::Name.name + "  " + Faker::PhoneNumber.cell_phone
   description = Faker::Lorem.paragraph
   oncampus = n%3 == 0 ? false : true
   islegacy = n%4 == 0 ? false : true
+  approved = false	
   Project.create!(title:  title,
                   organization: organization,
                   contact: contact,
                   description: description,
                   oncampus: oncampus,
-                  islegacy: islegacy)
+                  islegacy: islegacy,
+       		  approved: approved)
 end
+
+20.times do |n|
+  title  = Faker::Company.catch_phrase
+  organization = Faker::Company.name
+  contact = Faker::Name.name + "  " + Faker::PhoneNumber.cell_phone
+  description = Faker::Lorem.paragraph
+  oncampus = n%3 == 0 ? false : true
+  islegacy = n%4 == 0 ? false : true
+  approved = true	
+  Project.create!(title:  title,
+                  organization: organization,
+                  contact: contact,
+                  description: description,
+                  oncampus: oncampus,
+                  islegacy: islegacy,
+       		  approved: approved)
+end
+
+users = User.all
+
+20.times do |n|
+  name = Faker::Company.name
+  user_id = users[n].id
+  code = "abcd"
+  Team.create!(name: name, user_id: user_id, code: code)
+end
+
+teams=Team.all
+
+projects=Project.where("approved = ?", true)
+rnd = Random.new
+teams.each do |t|
+  projects.each do |p|
+    value= rnd.rand(-1..1)
+    Preference.create!(team_id: t.id,
+		       project_id: p.id,
+		       value: value)
+  end
+end
+
+
+
 
