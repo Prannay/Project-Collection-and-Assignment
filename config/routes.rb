@@ -44,6 +44,7 @@ Rails.application.routes.draw do
 
   get 'assign' => 'assignments#assign'
   get 'viewassign' => 'assignments#view'
+  get 'download' => 'assignments#download'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
