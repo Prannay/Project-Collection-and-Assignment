@@ -2,6 +2,20 @@ class AssignmentsController < ApplicationController
   before_action :logged_in_user
   before_action :admin_user
 
+  def download
+    @assignments = []
+    assign = Assignment.all
+    i=1
+    data = []
+    assign.each do |a|
+      @project = Project.find_by(id: a.project_id)
+      @team = Team.find_by(id: a.team_id)
+      data << [i, @project.organization, @project.description, @project.oncampus, @project.islegacy, @team.name]
+      i+=1
+    end
+    send_data data, filename: 'output.csv'
+  end
+  
   def assign
     @teams = Team.all
     @projects = Project.where("approved = ?", true)
@@ -118,6 +132,7 @@ class AssignmentsController < ApplicationController
       end
     end
     return matching_count, final_matchings
-    end
+  end
+    
 
 end
