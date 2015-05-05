@@ -21004,3 +21004,1074 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (0.6ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 787ms (Views: 786.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 03:12:14 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0[0m
+  Rendered teams/_team.html.erb (1.5ms)
+  Rendered teams/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 795ms (Views: 793.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/assignments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/custom.self-b162a22d8b7755ac173f5643ab5d41d32d7aa5852d8865fd1a9931f638c9d2f4.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/preferences.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/theme.self-9a05097a0bf60f489f0c89e95e5e12dd9a092332f4a18e2e835bc94fe7ca0ffd.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-843e8fe41275fac7212c1564bf97a092377791b8a5b84a92df14d560d1a21dff.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-397ecee50bef09a7cda8c5dfaaa265a62b088bf232f5142cdb51387e5fc62298.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-3a60048eb2ef1aae33d4e8637d4f208bada33f95418017b60e4bdd5a909701f2.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-d7a7db3f93f7dfa449dc3102e7651ea140068ceca343e7b40e4cbb04cb132d78.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-bb8031f2e196f26c242e6093ff5be2facad271ecca7299661d2abdd544734ed7.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-4ef8e935d5844661de4f30a3b86a8559093c04a0638cd1281d509878046cf089.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-2f7c47a18c55495b988ae9761c56a5ca745f17940314b28adbdfd5473c14d9bc.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-a75cc687d9086ab502f231ccbb3f33998d146a2be70c042de3b367fad3e266bc.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-97d90451ed5c9406f435380037255f44bb266b4d2142b618c6c43f875c07ad3d.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-8889c9c9f7075aaa33e573322cb0848887ce5956480fdc09a2b008f79cbf3cb4.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-c6529fccd823f632592b1e289838e8b14e3bddbcfbfee7459ccccddf0fbf5652.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-0d8afd56028f6eecddb82e2f62fd029eabf0a1d18cbd15e810f7bc1ddbc6c391.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-853fa48c47c60dcd304b0f5da0707e1aa4cb5d64f9e9d17cfb3e4c145047cab9.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-1374df29c4b4d30bcc83fd17f8c5cc7456558076482744c812582f988637f95d.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-3d82a9b3101a3389fb04b7d07e9f2e39316982795b773f54db374634b4fbc3a9.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-cbd709931e9bc6c5c1cc9ed1467359b7b79a3eb3024e42a7bb24b46af4d9f40f.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-2d638a06afdae775c459cf8ff10b5a804e1ab63d2d06e4381bc64e6c7b958cd9.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/base.self-94af08897154ba6b0227c26f91fc8671a3e7e797a8aa1fb801d432089d9d4d9d.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/all.self-c677192b48dc1a3b01b47f1fae63a03aef25f170dbf30755ae73a8b89d42afda.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-64b590c2d0d95f30c6c4dd0af09f0cde19509c8eff801516c80c98e01ae1b823.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/widget.self-19ca8b140af7fc380cccad5abadcf070daf4952f1402cb83b6199c37549b6d13.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-764a7e11d28d6d92958c3daa40e1fa7bf2799185173f317092b31a5ad5d0d5c0.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/position.self-a22a5a606ac183da99ec7ad8c8aaed4dddeb7d148975c7cd3f65ddffe89f5d8e.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-998833580e11979f6c2226a8910170c8f7d1ef49adc25c33adc7d31cd186220c.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-018c0a14cca97e1c030c519e8a65c4b819080cbd7f0a4810e3bab08698b25bec.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-c3805ba4caf7d6a835e14230e1da60de2827598f5db5becfa06d0a4b6b2daf72.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3f6ef631c1f97b6d552af89b679344cfd849377d115abb96ddba1209ae921c86.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.self-430fd8d1d675b348c742731d5d4f6c91ce8eec3ce751c6783f889f33e9689412.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-18a8d048b203a446b234a59e1b1daeccfce707183171c16826a7761c8bd1af39.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-3477df232aaefa9b0aa3e3551c09f4195acf8e07ab1a82073caeaa6822fe5297.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-ce66b060b6de64ac8efd0b8794647ab61311f6d1edfc200de94e8a8d38b1d929.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.self-9556cdfc79f1ccf8585ac2433eb1222f6919b6677ba0de7a99dbedbc005f6e6b.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect.self-ed20f2e37a1e647de0ef3e9bbe65a99380e2dd936d39d3d06145de97edae30ac.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-8deae34a33e3c94d769bf7bca3ddbbf75c1d78a46b0b0c2d79bd7bac0e5b3a7e.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-0e3e6060d3620ce332b67ad20b613785d079001eac567c75fa0e63f366671c84.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-6a0e7d61574dee3217df433652940406999ebb4f393776aef9527407c1c69970.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-53791a6cbad3356b9ea50661e8764d148f511153bfc8aeed38f48c7a1be9b4f1.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-4db6f58579d7b3cd2fbe5634f0bec051b06eaa7dab6a3d86f57c137d177b24df.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-c2d715d2b630f622381a3bcb8d7ae1d8585a29f3f3f5e1588e05fa25f34cc752.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-5fc651685e38bea0e6f95d70ca0938608a7edfeb4b656080e8bc02106802401e.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-beb721cc108c942f48439ca332dd43a0c068d3bf315b316b1e77c75260910abf.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.self-c3abbe4be67e4cfb38b78584a50d219a7d70b4da4a6b685e201ab38825940b69.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-f393fc123d0d6dbb88524f5b806154b6040c45bce35b07497b6c4d7ff270ae73.js?body=1" for ::1 at 2015-05-05 03:12:15 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-9608a75f4a0f92000b2d71f31744f988779c3efa2226ea3c78b75142abe84505.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-6817baf88ef127c8c5575cc78e9b231c946d45bbdf3eafdc9752e750378434ab.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-4494318cb68efbf7b940465a4cc04a2e06372784e46793f44e441f9825136df0.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-343043feea780c5f86002b27de240e60af2b3f867c8a4aa9d6941abc2ef165c2.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-3e7cb238817927bf4c3ab5778ad7347ef8302bf2b69d23db7c3b5f2c55561d12.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-06383ab48efb3f2fdf4d58e22c5031c01a777fadcee599fe12bdf419b0fffc8f.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-9ca09626e98f244e0fcc9192645f428faa56724516d9731c4467bc917c807699.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-90a5197016c97a0942a58f479c703556b687ef61f19e72829a4d37e6266c4104.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-d928d8f01bf5df3d6fdf7d2bb095ae34705406df88e9337f603b0a2f4e4e3b2d.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-5b4e6e548c4b5d16d0d7b26c507d3e5abe0fbb814faedf11f73d4a597e7056e7.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-d915c1c503b4d922dffd52fc738d4d9bea0ae0e28fa485c2400e0fa32263cb80.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-8585cdcc7e74fc540e62fdae42601148a7de88e144ea19d92cb22c992b155e44.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-d32db84b490cc79d9cf19ae11deb69fba85f77b011aeaf57ff6909b5008edea8.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/preferences.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-05 03:12:16 -0500
+
+
+Started GET "/projects" for ::1 at 2015-05-05 03:12:21 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects"  ORDER BY "projects"."created_at" DESC LIMIT 30 OFFSET 0[0m
+  Rendered projects/_project.html.erb (17.1ms)
+  Rendered projects/index.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 732ms (Views: 730.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/add_project" for ::1 at 2015-05-05 03:12:27 -0500
+Processing by ProjectsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered projects/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 539ms (Views: 537.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/add_project" for ::1 at 2015-05-05 03:12:28 -0500
+Processing by ProjectsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered projects/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 808ms (Views: 806.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-05-05 03:12:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/_user.html.erb (7.8ms)
+  Rendered users/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 576ms (Views: 573.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/add_project" for ::1 at 2015-05-05 03:12:32 -0500
+Processing by ProjectsController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered projects/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 789ms (Views: 788.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-05-05 03:12:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+  Rendered users/_user.html.erb (9.5ms)
+  Rendered users/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 802ms (Views: 799.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 03:12:41 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0[0m
+  Rendered teams/_team.html.erb (2.6ms)
+  Rendered teams/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 548ms (Views: 543.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2015-05-05 03:12:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 769ms (Views: 767.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 17:14:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1365ms (Views: 1364.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/assignments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 17:14:46 -0500
+
+
+Started GET "/assets/preferences.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 17:14:46 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 17:14:47 -0500
+
+
+Started GET "/assets/preferences.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 17:14:47 -0500
+
+
+Started GET "/login" for ::1 at 2015-05-05 17:14:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (352.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 963ms (Views: 962.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 17:15:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KaphtgRM6tjIzTYOR4C63DudzfK7lN85jaxN0ibpe/Ll3utyeYLPiNt89oXQnX3S1P6B+HZ10vHPrIIq77faaw==", "session"=>{"email"=>"example-22@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-22@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/24
+Completed 302 Found in 99ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/24" for ::1 at 2015-05-05 17:15:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.9ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered layouts/_header.html.erb (39.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 650ms (Views: 645.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 17:15:18 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+Redirected to http://localhost:3000/teams/9
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/9" for ::1 at 2015-05-05 17:15:18 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mTeam Exists (0.2ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 24], ["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 24], ["id", 9]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 24], ["team_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?[0m  [["team_id", 9]]
+  Rendered teams/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 631ms (Views: 544.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 17:15:20 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 612ms (Views: 611.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/add_project" for ::1 at 2015-05-05 17:15:24 -0500
+Processing by ProjectsController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.4ms)
+  Rendered projects/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 646ms (Views: 633.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 17:15:35 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yIkRlGlGhtgBfB16AbR7Oq5V1qci71KiLcibrormkloE/ZtQFIijiBLN3fGWqbw0QTaare8OX2pvyFRWQ7gzww=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 17:15:35 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 522ms (Views: 521.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 17:15:37 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 638ms (Views: 637.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 17:15:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8UgGN7beax04WR1Z0ggahiy63IyG7X2T4QCh2qOG3dTsarcoxVc/GdQpP7wVedk99GneP/6uD4NhM1/o9C67g==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "admin@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-05-05 17:15:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.2ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 585ms (Views: 582.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assign" for ::1 at 2015-05-05 17:16:04 -0500
+Processing by AssignmentsController#assign as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 49]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 40]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 50]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 49]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 48]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 46]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 45]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 44]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 43]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 41]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 50]]
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 40]]
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "assignments"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 5], ["project_id", 50], ["created_at", "2015-05-05 22:16:04.506778"], ["updated_at", "2015-05-05 22:16:04.506778"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 9], ["project_id", 49], ["created_at", "2015-05-05 22:16:04.509091"], ["updated_at", "2015-05-05 22:16:04.509091"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 48], ["created_at", "2015-05-05 22:16:04.510951"], ["updated_at", "2015-05-05 22:16:04.510951"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 4], ["project_id", 47], ["created_at", "2015-05-05 22:16:04.512906"], ["updated_at", "2015-05-05 22:16:04.512906"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 46], ["created_at", "2015-05-05 22:16:04.515175"], ["updated_at", "2015-05-05 22:16:04.515175"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 6], ["project_id", 44], ["created_at", "2015-05-05 22:16:04.517432"], ["updated_at", "2015-05-05 22:16:04.517432"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered assignments/assign.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 589ms (Views: 536.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assign" for ::1 at 2015-05-05 17:32:53 -0500
+Processing by AssignmentsController#assign as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT "teams".* FROM "teams"[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 48]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 44]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 43]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 42]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 40]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 43]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 40]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 50]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 49]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 48]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 40]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 44]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 45]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 44]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 41]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 40]]
+  [1m[36mSQL (1.5ms)[0m  [1mDELETE FROM "assignments"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 5], ["project_id", 50], ["created_at", "2015-05-05 22:32:54.201961"], ["updated_at", "2015-05-05 22:32:54.201961"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 9], ["project_id", 49], ["created_at", "2015-05-05 22:32:54.204840"], ["updated_at", "2015-05-05 22:32:54.204840"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 48], ["created_at", "2015-05-05 22:32:54.207067"], ["updated_at", "2015-05-05 22:32:54.207067"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 4], ["project_id", 47], ["created_at", "2015-05-05 22:32:54.209184"], ["updated_at", "2015-05-05 22:32:54.209184"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 46], ["created_at", "2015-05-05 22:32:54.211014"], ["updated_at", "2015-05-05 22:32:54.211014"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 6], ["project_id", 44], ["created_at", "2015-05-05 22:32:54.212846"], ["updated_at", "2015-05-05 22:32:54.212846"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/viewassign
+Completed 302 Found in 74ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/viewassign" for ::1 at 2015-05-05 17:32:54 -0500
+Processing by AssignmentsController#view as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAssignment Load (0.1ms)[0m  [1mSELECT "assignments".* FROM "assignments"[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 50]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 49]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 48]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 47]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 46]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 44]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered assignments/view.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  Rendered layouts/_header.html.erb (11.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 704ms (Views: 697.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/viewassign" for ::1 at 2015-05-05 17:33:01 -0500
+Processing by AssignmentsController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAssignment Load (0.1ms)[0m  SELECT "assignments".* FROM "assignments"
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 50]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 48]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 47]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 46]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 44]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered assignments/view.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 622ms (Views: 614.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assign" for ::1 at 2015-05-05 17:33:04 -0500
+Processing by AssignmentsController#assign as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC[0m
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 45]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 43]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 40]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 50]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 49]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 44]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 43]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 42]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 48]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 47]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 46]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 40]]
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "assignments"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 5], ["project_id", 50], ["created_at", "2015-05-05 22:33:04.562418"], ["updated_at", "2015-05-05 22:33:04.562418"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 49], ["created_at", "2015-05-05 22:33:04.564320"], ["updated_at", "2015-05-05 22:33:04.564320"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["project_id", 48], ["created_at", "2015-05-05 22:33:04.566477"], ["updated_at", "2015-05-05 22:33:04.566477"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 4], ["project_id", 47], ["created_at", "2015-05-05 22:33:04.568385"], ["updated_at", "2015-05-05 22:33:04.568385"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 7], ["project_id", 46], ["created_at", "2015-05-05 22:33:04.570237"], ["updated_at", "2015-05-05 22:33:04.570237"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 6], ["project_id", 44], ["created_at", "2015-05-05 22:33:04.572116"], ["updated_at", "2015-05-05 22:33:04.572116"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/viewassign
+Completed 302 Found in 36ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/viewassign" for ::1 at 2015-05-05 17:33:04 -0500
+Processing by AssignmentsController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAssignment Load (0.1ms)[0m  SELECT "assignments".* FROM "assignments"
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 50]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 48]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 47]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 46]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 44]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered assignments/view.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 548ms (Views: 541.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assign" for ::1 at 2015-05-05 17:33:09 -0500
+Processing by AssignmentsController#assign as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "projects" WHERE (approved = 't')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" WHERE (approved = 't')[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams"
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC[0m
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 42]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 4], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 4], ["project_id", 40]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 50]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 49]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 5], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 5], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 44]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 43]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 6], ["project_id", 41]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 6], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 49]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 48]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 47]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 46]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 45]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 43]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 41]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 40]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 49]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 48]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 44]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 43]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 42]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 40]]
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "assignments"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 5], ["project_id", 50], ["created_at", "2015-05-05 22:33:09.139280"], ["updated_at", "2015-05-05 22:33:09.139280"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 49], ["created_at", "2015-05-05 22:33:09.141213"], ["updated_at", "2015-05-05 22:33:09.141213"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["project_id", 48], ["created_at", "2015-05-05 22:33:09.142960"], ["updated_at", "2015-05-05 22:33:09.142960"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 4], ["project_id", 47], ["created_at", "2015-05-05 22:33:09.144710"], ["updated_at", "2015-05-05 22:33:09.144710"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 7], ["project_id", 46], ["created_at", "2015-05-05 22:33:09.146432"], ["updated_at", "2015-05-05 22:33:09.146432"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "assignments" ("team_id", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 6], ["project_id", 44], ["created_at", "2015-05-05 22:33:09.148361"], ["updated_at", "2015-05-05 22:33:09.148361"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/viewassign
+Completed 302 Found in 34ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/viewassign" for ::1 at 2015-05-05 17:33:09 -0500
+Processing by AssignmentsController#view as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAssignment Load (0.1ms)[0m  SELECT "assignments".* FROM "assignments"
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 50]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 48]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 47]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 46]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 44]]
+  [1m[35mTeam Load (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered assignments/view.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 614ms (Views: 608.6ms | ActiveRecord: 1.1ms)

@@ -19,7 +19,7 @@ class AssignmentsController < ApplicationController
         
     @count, @matching = project_assignment(@graph)
 
-    @assignments = []
+    
     #Clearing Old assignments
     Assignment.delete_all
     #Store matching in Assignment model
@@ -29,16 +29,21 @@ class AssignmentsController < ApplicationController
         team_index = @matching[i]
         team_no = @teams[team_index].id
         project_no = @projects[project_index].id
-        project_title = @projects[project_index].title
-        team_name = @teams[team_index].name
        Assignment.create(team_id: team_no, project_id: project_no)
-
-       hash =  {  :project_id => project_no, :team_id => team_no, :project_title => project_title, :team_name => team_name }
-       @assignments << hash
       end
     end
+    redirect_to viewassign_path
+  end
 
-    
+  def view
+    @assignments = []
+    assign = Assignment.all
+    assign.each do |a|
+      @project = Project.find_by(id: a.project_id)
+      @team = Team.find_by(id: a.team_id)
+        hash =  {  :project_id => @project.id, :team_id => @team.id, :project_title => @project.title, :team_name => @team.name }
+       @assignments << hash
+    end
   end
 
   private
