@@ -19412,3 +19412,1595 @@ Processing by TeamsController#show as HTML
   Rendered layouts/_header.html.erb (3.1ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 801ms (Views: 797.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:01:21 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dHf/rAdAwFvfXIsov+Yx7AkBekPE1kYj3BruE7m9Oa0k2bwUZ840WzRSdAQMyM/y6ppo014fbbFoAuwk7Ow11Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:01:21 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 521ms (Views: 520.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:01:24 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 777ms (Views: 776.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:01:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"935Df1i3KIrc/oMfb7OIYbgBJlIjx/UDtaQdh7mKvb2n0ADHODncijfwfDPcnXZ/W5o0wrkO3pEBvB+w7NuxxQ==", "session"=>{"email"=>"example-15@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-15@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 83ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/17" for ::1 at 2015-05-05 03:01:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 17], ["user_id", 17]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 704ms (Views: 702.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:01:48 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered relationships/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 17], ["user_id", 17]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 512ms (Views: 510.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:01:57 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyKrTsLYCp8d6pV5NNCsU0GsECIDNnXl6RtezY33zM+TjOj2olb+n/bkalWH/lJNojcCspn/XnddA1z62KbAtw==", "relationship"=>{"name"=>"CodePackers", "code"=>"uabs"}, "commit"=>"Join Team"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "CodePackers"]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 17], ["team_id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 7], ["user_id", 17], ["created_at", "2015-05-05 08:01:57.827082"], ["updated_at", "2015-05-05 08:01:57.827082"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/teams/7
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/teams/7" for ::1 at 2015-05-05 03:01:57 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mTeam Exists (0.1ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 17], ["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 17], ["id", 7]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 17], ["team_id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?  [["team_id", 7]]
+  Rendered teams/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 17], ["user_id", 17]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 777ms (Views: 773.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/7/preference" for ::1 at 2015-05-05 03:02:04 -0500
+Processing by TeamsController#preference as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 13], ["user_id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered teams/_preference_title.html.erb (0.0ms)
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC[0m
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 50]]
+  Rendered teams/_preference_selector.html.erb (1.2ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 49]]
+  Rendered teams/_preference_selector.html.erb (1.0ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 48]]
+  Rendered teams/_preference_selector.html.erb (0.9ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 47]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 46]]
+  Rendered teams/_preference_selector.html.erb (1.1ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 45]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 44]]
+  Rendered teams/_preference_selector.html.erb (1.0ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 43]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 42]]
+  Rendered teams/_preference_selector.html.erb (0.9ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 41]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 40]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  Rendered teams/preference.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 13], ["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 702ms (Views: 697.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:07 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"48"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 48]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 48], ["value", 1], ["created_at", "2015-05-05 08:02:07.953363"], ["updated_at", "2015-05-05 08:02:07.953363"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:09 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"44"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 44]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 44]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 7], ["project_id", 44], ["value", 1], ["created_at", "2015-05-05 08:02:09.547882"], ["updated_at", "2015-05-05 08:02:09.547882"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:10 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"50"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 50]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 50], ["value", 1], ["created_at", "2015-05-05 08:02:10.996610"], ["updated_at", "2015-05-05 08:02:10.996610"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:14 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"40"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 7], ["project_id", 40], ["value", 1], ["created_at", "2015-05-05 08:02:14.725897"], ["updated_at", "2015-05-05 08:02:14.725897"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:16 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"42"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 42]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 42]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 42], ["value", 1], ["created_at", "2015-05-05 08:02:16.319272"], ["updated_at", "2015-05-05 08:02:16.319272"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:19 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"1"}, "project_id"=>"46"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 46]]
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 46]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 7], ["project_id", 46], ["value", 1], ["created_at", "2015-05-05 08:02:19.938577"], ["updated_at", "2015-05-05 08:02:19.938577"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:21 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"-1"}, "project_id"=>"47"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 47]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 47]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 47], ["value", -1], ["created_at", "2015-05-05 08:02:21.871703"], ["updated_at", "2015-05-05 08:02:21.871703"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:22 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"-1"}, "project_id"=>"49"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 49]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 7], ["project_id", 49], ["value", -1], ["created_at", "2015-05-05 08:02:22.872742"], ["updated_at", "2015-05-05 08:02:22.872742"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:25 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"-1"}, "project_id"=>"45"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 45]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 45], ["value", -1], ["created_at", "2015-05-05 08:02:25.670700"], ["updated_at", "2015-05-05 08:02:25.670700"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:27 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"-1"}, "project_id"=>"43"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 13]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 43]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 7], ["project_id", 43]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 7], ["project_id", 43], ["value", -1], ["created_at", "2015-05-05 08:02:27.688585"], ["updated_at", "2015-05-05 08:02:27.688585"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:02:29 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg==", "preference"=>{"value"=>"-1"}, "project_id"=>"41"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 7], ["project_id", 41]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 7], ["project_id", 41], ["value", -1], ["created_at", "2015-05-05 08:02:29.149017"], ["updated_at", "2015-05-05 08:02:29.149017"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:02:36 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dtteWhAGK4DPJkWc1X0grjuuSVAxcYB2GssMRSw+xTSdp/9wvSf3NXdanlihnc1FsSngJHI3Eo+3zG/KLuzYJg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:02:36 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 504ms (Views: 504.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:02:39 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 774ms (Views: 774.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:02:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q10xkqs2sgnwKUMYQszMwB9bTuwggi/7E6w019313BJAIZC4BhduvEhVmNw2LCErldznmGPEvQK+q1dY3yfBAA==", "session"=>{"email"=>"example-16@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-16@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/18
+Completed 302 Found in 80ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/18" for ::1 at 2015-05-05 03:02:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 18], ["user_id", 18]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 787ms (Views: 786.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams/new" for ::1 at 2015-05-05 03:03:16 -0500
+Processing by TeamsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered teams/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 18], ["user_id", 18]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 516ms (Views: 514.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/teams" for ::1 at 2015-05-05 03:03:41 -0500
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cnKofgVjFnlA39bAthon5yz6biMu00Akq4z4L7vAORCZDglUqELKzPijDQTC+soMpn3HV22V0t0Gi5uguRIkAg==", "team"=>{"name"=>"CodeJamers"}, "commit"=>"Create team"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams" WHERE "teams"."user_id" = ?  [["user_id", 18]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mTeam Exists (0.1ms)[0m  SELECT  1 AS one FROM "teams" WHERE "teams"."name" = 'CodeJamers' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "user_id", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "CodeJamers"], ["user_id", 18], ["code", "ljmc"], ["created_at", "2015-05-05 08:03:41.331773"], ["updated_at", "2015-05-05 08:03:41.331773"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["user_id", 18], ["created_at", "2015-05-05 08:03:41.335592"], ["updated_at", "2015-05-05 08:03:41.335592"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/teams/8
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/teams/8" for ::1 at 2015-05-05 03:03:41 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Exists (0.1ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 18], ["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 18], ["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?  [["team_id", 8]]
+  Rendered teams/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 18], ["user_id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 783ms (Views: 779.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:03:52 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8r/QtR+3i5PnkCeAsJKwfin8REFCJ6XOJIkO0hprbgOiEZMNfzl/kwye2KwDvE5gymdW0djujlyQkQzlTzpiew=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:03:52 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 698ms (Views: 697.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:03:57 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 527ms (Views: 527.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:04:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y38N3qyG9SGY8edGmjUGIgDsRhwXyxPKH8iV5dXQTTGb0U5mzAgBIXP/GGopG/g843dUjI0COFir0JfSgIFBSQ==", "session"=>{"email"=>"example-17@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "example-17@railstutorial.org"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/19" for ::1 at 2015-05-05 03:04:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "19"]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 19], ["user_id", 19]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 807ms (Views: 805.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:04:12 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered relationships/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 19], ["user_id", 19]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 592ms (Views: 590.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:04:23 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihNqatMiT1jiKT/yJ+FTveVTIjWa6ITja3H0FAwBPlDavSnSs6y7WAknwN6Uz62jBsgwpQAhr3HfafYjWVAyKA==", "relationship"=>{"name"=>"CodeJamers", "code"=>"ljmc"}, "commit"=>"Join Team"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "CodeJamers"]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 19], ["team_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["user_id", 19], ["created_at", "2015-05-05 08:04:23.222050"], ["updated_at", "2015-05-05 08:04:23.222050"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/teams/8
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/teams/8" for ::1 at 2015-05-05 03:04:23 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mTeam Exists (0.1ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 19], ["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 19], ["id", 8]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 19], ["team_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?[0m  [["team_id", 8]]
+  Rendered teams/show.html.erb within layouts/application (114.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 19], ["user_id", 19]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 629ms (Views: 625.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:04:28 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jw1z4X4+wSVV7qaeDdABeC4CbEx6oLCm9gcZ4xMJXE53ozBZHrA1Jb7gWbK+/v9mzZl+3OBpmzRCHxvURlhQNg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:04:28 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 779ms (Views: 778.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:04:34 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 518ms (Views: 518.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:04:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8GwW1R2/N2popIYXFSYW59rEJWF8rWCYEmZquNPUvTfb/PjNPgI3UKsbTTvemZFfPACBR87nhDUUZudth5ejA==", "session"=>{"email"=>"example-18@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-18@railstutorial.org"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 78ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/20" for ::1 at 2015-05-05 03:04:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "20"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 20], ["user_id", 20]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 780ms (Views: 779.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:04:50 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 20]]
+  Rendered relationships/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 20], ["user_id", 20]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 801ms (Views: 800.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:05:00 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XzBBXuRstnWjGOeTPfaP2qi3pl3WNmgGYhy/2Y5pWNMPngLmhOJCdUgWGL+O2HHESyy0zUz/Q5TWBL3u2zhUqw==", "relationship"=>{"name"=>"CodeJamers", "code"=>"lmc"}, "commit"=>"Join Team"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "CodeJamers"]]
+  Rendered relationships/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 20], ["user_id", 20]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 525ms (Views: 523.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:05:08 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e6sEdQ8h5CKPVA0XTtMHFxiHaBqZoQ7I3KHvvpIps78rBUfNb68QImRa8jv9/fkJ+xx6igNoJVpoue2Jx3i/xw==", "relationship"=>{"name"=>"CodeJamers", "code"=>"ljmc"}, "commit"=>"Join Team"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 20]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "CodeJamers"]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 20], ["team_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["user_id", 20], ["created_at", "2015-05-05 08:05:08.631516"], ["updated_at", "2015-05-05 08:05:08.631516"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/teams/8
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/teams/8" for ::1 at 2015-05-05 03:05:08 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mTeam Exists (0.1ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 20], ["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 20], ["id", 8]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 20], ["team_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?[0m  [["team_id", 8]]
+  Rendered teams/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 20], ["user_id", 20]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 811ms (Views: 808.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:05:12 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BVZ4crfRK8ZFIyKDhrG2tYuFzl1GR0rZl7qQNKwVeG9V+DvK11/fxq4t3a81n0iraB7czdyOYUsjopID+UR0Fw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:05:12 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 695ms (Views: 694.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:05:15 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 521ms (Views: 520.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:05:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/ZRHfskkcCqWCzFQkZbyOIC6otIxZ2DOTLiede9WMKnWBKlm6plwEFW0+nxaKXWAZn4G9IMthGNKuBOguxUug==", "session"=>{"email"=>"example-19@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-19@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/21
+Completed 302 Found in 73ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/21" for ::1 at 2015-05-05 03:05:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 21], ["user_id", 21]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 811ms (Views: 810.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:05:31 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 21]]
+  Rendered relationships/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 21], ["user_id", 21]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 533ms (Views: 531.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:05:40 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v1yYuDibEV4ASkLOBwDkzFUdHK6mMagm4EjsgW2DFGnv8tsAWBXlXutEveK0LhrStoYOPjz4g7RUUO62ONIYEQ==", "relationship"=>{"name"=>"CodeJamers", "code"=>"ljmc"}, "commit"=>"Join Team"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 21]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "CodeJamers"]]
+  [1m[36mRelationship Load (0.0ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 21], ["team_id", 8]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 8], ["user_id", 21], ["created_at", "2015-05-05 08:05:40.181124"], ["updated_at", "2015-05-05 08:05:40.181124"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/teams/8
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/teams/8" for ::1 at 2015-05-05 03:05:40 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36mTeam Exists (0.1ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 21], ["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 21], ["id", 8]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 21], ["team_id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?  [["team_id", 8]]
+  Rendered teams/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 21], ["user_id", 21]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 714ms (Views: 709.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:05:50 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l0TVsJE12/NJwViFrKDnLPFPUiQg7Z1rIgwwnTIee7HH6pYI8bsv86LPp6kfjhkyEtRAtLoktvmWFDKqZ093yQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 21]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:05:50 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 789ms (Views: 789.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:05:56 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 530ms (Views: 529.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:06:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HsE3UQ8Ttpi06WwYgWU8fRW3Ofa4y80aem7gFPMLLthOb3Tpb51CmF/nkzQyS8Jj9iwrZiIC5ojOduIjploioA==", "session"=>{"email"=>"example-20@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "example-20@railstutorial.org"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 73ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/22" for ::1 at 2015-05-05 03:06:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "22"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 22], ["user_id", 22]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 791ms (Views: 789.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:06:12 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 22]]
+  Rendered relationships/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 22], ["user_id", 22]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 597ms (Views: 595.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:06:22 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OtHVaXPv6l6jrXVf3yhaxJNFQuWV2YLZAAd2rRpV4atqf5bRE2EeXkijinNsBqTacN5QdQ8QqUu0H3SaTwTt0w==", "relationship"=>{"name"=>"CodeJamers", "code"=>"ljmc"}, "commit"=>"Join Team"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 22]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "CodeJamers"]]
+  [1m[35mRelationship Load (0.0ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 22], ["team_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["team_id", 8], ["user_id", 22], ["created_at", "2015-05-05 08:06:22.988362"], ["updated_at", "2015-05-05 08:06:22.988362"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/teams/8
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/teams/8" for ::1 at 2015-05-05 03:06:22 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35mTeam Exists (0.2ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 22], ["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 22], ["id", 8]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1  [["user_id", 22], ["team_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?[0m  [["team_id", 8]]
+  Rendered teams/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 22], ["user_id", 22]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 660ms (Views: 540.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams/8/preference" for ::1 at 2015-05-05 03:06:51 -0500
+Processing by TeamsController#preference as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 18], ["user_id", 18]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered teams/_preference_title.html.erb (0.1ms)
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 50]]
+  Rendered teams/_preference_selector.html.erb (1.1ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 49]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 48]]
+  Rendered teams/_preference_selector.html.erb (0.9ms)
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 47]]
+  Rendered teams/_preference_selector.html.erb (1.1ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 46]]
+  Rendered teams/_preference_selector.html.erb (1.1ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 45]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 44]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 43]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 42]]
+  Rendered teams/_preference_selector.html.erb (0.9ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 41]]
+  Rendered teams/_preference_selector.html.erb (1.3ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 40]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  Rendered teams/preference.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 18], ["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 822ms (Views: 817.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:06:54 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"1"}, "project_id"=>"46"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 46]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 46]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 46], ["value", 1], ["created_at", "2015-05-05 08:06:54.466204"], ["updated_at", "2015-05-05 08:06:54.466204"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:06:55 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"1"}, "project_id"=>"50"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 50]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 50]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 50], ["value", 1], ["created_at", "2015-05-05 08:06:55.874276"], ["updated_at", "2015-05-05 08:06:55.874276"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:06:57 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"1"}, "project_id"=>"49"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 49]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 49], ["value", 1], ["created_at", "2015-05-05 08:06:57.764734"], ["updated_at", "2015-05-05 08:06:57.764734"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:06:58 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"1"}, "project_id"=>"48"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 48]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 48]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 48], ["value", 1], ["created_at", "2015-05-05 08:06:58.595812"], ["updated_at", "2015-05-05 08:06:58.595812"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:06:59 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"1"}, "project_id"=>"47"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 47]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 47], ["value", 1], ["created_at", "2015-05-05 08:06:59.553010"], ["updated_at", "2015-05-05 08:06:59.553010"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:02 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"0"}, "project_id"=>"43"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 43]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 43], ["value", 0], ["created_at", "2015-05-05 08:07:02.506342"], ["updated_at", "2015-05-05 08:07:02.506342"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:06 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"0"}, "project_id"=>"44"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 44]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 44]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 44], ["value", 0], ["created_at", "2015-05-05 08:07:06.016856"], ["updated_at", "2015-05-05 08:07:06.016856"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:07 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"-1"}, "project_id"=>"45"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 45]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 45]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 45], ["value", -1], ["created_at", "2015-05-05 08:07:07.166207"], ["updated_at", "2015-05-05 08:07:07.166207"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:08 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"-1"}, "project_id"=>"42"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 42]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 42], ["value", -1], ["created_at", "2015-05-05 08:07:08.512490"], ["updated_at", "2015-05-05 08:07:08.512490"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:09 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"-1"}, "project_id"=>"41"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 41]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 8], ["project_id", 41]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 8], ["project_id", 41], ["value", -1], ["created_at", "2015-05-05 08:07:09.483698"], ["updated_at", "2015-05-05 08:07:09.483698"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:07:10 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug==", "preference"=>{"value"=>"-1"}, "project_id"=>"40"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 18]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 8], ["project_id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 8], ["project_id", 40], ["value", -1], ["created_at", "2015-05-05 08:07:10.438864"], ["updated_at", "2015-05-05 08:07:10.438864"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:07:13 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IUJxqRlermYR6thAvHlJ1/Wbpk1/tVnX2O+UviIsC6jKPtCDtH9y06mWA4TImaQ8fxwPOTzzyy516PcxIP4Wug=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:07:13 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 709ms (Views: 709.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:07:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 509ms (Views: 508.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:07:29 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p29Vzpz4LXLi0qDFpZ/425WvO3n6jOp3mtgoVOscmvNME/TkMdnxx1quewHRfxUwHyiSDbnKeI4330vb6c6H4Q==", "session"=>{"email"=>"example-21@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "example-21@railstutorial.org"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/23
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/23" for ::1 at 2015-05-05 03:07:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "23"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 23], ["user_id", 23]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 782ms (Views: 780.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams/new" for ::1 at 2015-05-05 03:07:34 -0500
+Processing by TeamsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered teams/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 23], ["user_id", 23]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 530ms (Views: 529.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/teams" for ::1 at 2015-05-05 03:07:58 -0500
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dq2tMe8NkZJun8MOaNQk4PT8fGEX/rV6biiB91ZqYMPl0QwbQixNJ9bjGMocNMkLfnvVFVS4J4PDL+J4VLh90Q==", "team"=>{"name"=>"BuildPath"}, "commit"=>"Create team"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "teams" WHERE "teams"."user_id" = ?[0m  [["user_id", 23]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mTeam Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "teams" WHERE "teams"."name" = 'BuildPath' LIMIT 1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "teams" ("name", "user_id", "code", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "BuildPath"], ["user_id", 23], ["code", "obqr"], ["created_at", "2015-05-05 08:07:58.223245"], ["updated_at", "2015-05-05 08:07:58.223245"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 23], ["created_at", "2015-05-05 08:07:58.230703"], ["updated_at", "2015-05-05 08:07:58.230703"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/teams/9
+Completed 302 Found in 84ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/teams/9" for ::1 at 2015-05-05 03:07:58 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Exists (0.1ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 23], ["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 23], ["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?[0m  [["team_id", 9]]
+  Rendered teams/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 23], ["user_id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 727ms (Views: 723.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:08:02 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NmVlm/ytRvY1QaIFIVz8qZTAwxcQXj1O4hy2HrM8arZmyyYjnCOy9t5PXSmScgK3d1vRh4qXFtxWBLQp5m1mzg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 22]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:08:02 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 787ms (Views: 787.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:08:05 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 522ms (Views: 521.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:08:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZlLG7/LGPRDsB2Y4NTD4fKToOEA7lnQFfHzawVrMsAY2/IVXkkjJEAcJmRSGHgZiR3Mq0KFfX5fIZNj2D528fg==", "session"=>{"email"=>"example-22@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-22@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/24
+Completed 302 Found in 81ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/24" for ::1 at 2015-05-05 03:08:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.2ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 784ms (Views: 782.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:08:21 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered relationships/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 24], ["user_id", 24]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 605ms (Views: 603.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:08:33 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yaigyJgu/Jn2PykO/Zuv32x8Oxin9mmhs21Qfzs56eviOE7Qu5P8ozWA4iI2JChnirifPhW8jQy1bd2qb3r3w==", "relationship"=>{"name"=>"BuildPath", "code"=>"obqr"}, "commit"=>"Join Team"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 24]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "BuildPath"]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 24], ["team_id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 24], ["created_at", "2015-05-05 08:08:33.994320"], ["updated_at", "2015-05-05 08:08:33.994320"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/teams/9
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/teams/9" for ::1 at 2015-05-05 03:08:34 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mTeam Exists (0.2ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 24], ["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 24], ["id", 9]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 24], ["team_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?  [["team_id", 9]]
+  Rendered teams/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 24], ["user_id", 24]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 713ms (Views: 709.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:08:39 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DY8hECgjW2ow6HBT9XgnHLsKKz/bUiJj21tSQJXKyhddIWKoSK2vatvmj39GVtkCWJE5r0GbCfFvQ1B3wJvGbw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:08:39 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 785ms (Views: 785.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 03:08:43 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 522ms (Views: 521.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:08:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tWjgFLFDI8F4eIn0YCVmFx3IyYnRyPkapp38DFCseSrlxqOs0c3XwZN2dtjTC5gJ/lPbGUsB0ogShf47Bf11Ug==", "session"=>{"email"=>"example-23@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "example-23@railstutorial.org"]]
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 856ms (Views: 777.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 03:09:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7r04ftPyaudHJPG3JZmRcEn/EDTbv88utloVLl8SOZ6+E3vGs3ye56wqDpuWt29uqmQCpEF25LwCQhcZCkM15g==", "session"=>{"email"=>"example-23@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "example-23@railstutorial.org"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/25
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/25" for ::1 at 2015-05-05 03:09:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 25], ["user_id", 25]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 523ms (Views: 521.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jointeam" for ::1 at 2015-05-05 03:09:27 -0500
+Processing by RelationshipsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+  Rendered relationships/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 25], ["user_id", 25]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 793ms (Views: 792.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/jointeam" for ::1 at 2015-05-05 03:09:37 -0500
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H8I0engW/Rp+hTEzIPJmb1h4WIGk5bWZsr7BLz+Km4lPbHfCGJgJGpWLzh+T3Jhxu+NKET4sngsGpsMYatuX8Q==", "relationship"=>{"name"=>"BuildPath", "code"=>"obqr"}, "commit"=>"Join Team"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 25]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "BuildPath"]]
+  [1m[36mRelationship Load (0.0ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 25], ["team_id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "relationships" ("team_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["team_id", 9], ["user_id", 25], ["created_at", "2015-05-05 08:09:37.814982"], ["updated_at", "2015-05-05 08:09:37.814982"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/teams/9
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/teams/9" for ::1 at 2015-05-05 03:09:37 -0500
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mTeam Exists (0.1ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?[0m  [["user_id", 25], ["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "relationships" ON "teams"."id" = "relationships"."team_id" WHERE "relationships"."user_id" = ? AND "teams"."id" = ?  [["user_id", 25], ["id", 9]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."team_id" = ? LIMIT 1[0m  [["user_id", 25], ["team_id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."team_id" = ?  [["team_id", 9]]
+  Rendered teams/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 25], ["user_id", 25]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 800ms (Views: 797.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/9/preference" for ::1 at 2015-05-05 03:09:45 -0500
+Processing by TeamsController#preference as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 23], ["user_id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered teams/_preference_title.html.erb (0.0ms)
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE (approved = 't')  ORDER BY "projects"."created_at" DESC[0m
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 50]]
+  Rendered teams/_preference_selector.html.erb (1.1ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 49]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 48]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 47]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 46]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 45]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 44]]
+  Rendered teams/_preference_selector.html.erb (0.8ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 43]]
+  Rendered teams/_preference_selector.html.erb (1.2ms)
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 42]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 41]]
+  Rendered teams/_preference_selector.html.erb (0.7ms)
+  [1m[35mPreference Load (0.0ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 40]]
+  Rendered teams/_preference_selector.html.erb (0.6ms)
+  Rendered teams/preference.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 23], ["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 544ms (Views: 539.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:49 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"1"}, "project_id"=>"43"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 43]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 43]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 43], ["value", 1], ["created_at", "2015-05-05 08:09:49.584448"], ["updated_at", "2015-05-05 08:09:49.584448"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:50 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"1"}, "project_id"=>"42"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 42]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 42]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 9], ["project_id", 42], ["value", 1], ["created_at", "2015-05-05 08:09:50.565020"], ["updated_at", "2015-05-05 08:09:50.565020"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:51 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"1"}, "project_id"=>"41"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 41]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 41]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 41], ["value", 1], ["created_at", "2015-05-05 08:09:51.333238"], ["updated_at", "2015-05-05 08:09:51.333238"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:52 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"1"}, "project_id"=>"49"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 49]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 49]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 9], ["project_id", 49], ["value", 1], ["created_at", "2015-05-05 08:09:52.823766"], ["updated_at", "2015-05-05 08:09:52.823766"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:54 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"1"}, "project_id"=>"45"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 45]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 45]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 45], ["value", 1], ["created_at", "2015-05-05 08:09:54.096784"], ["updated_at", "2015-05-05 08:09:54.096784"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:57 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"0"}, "project_id"=>"47"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 47]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 47]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 9], ["project_id", 47], ["value", 0], ["created_at", "2015-05-05 08:09:57.351410"], ["updated_at", "2015-05-05 08:09:57.351410"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:09:59 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"0"}, "project_id"=>"48"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 48]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 48]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 48], ["value", 0], ["created_at", "2015-05-05 08:09:59.282324"], ["updated_at", "2015-05-05 08:09:59.282324"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:10:00 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"-1"}, "project_id"=>"50"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 50]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 50]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 9], ["project_id", 50], ["value", -1], ["created_at", "2015-05-05 08:10:00.596648"], ["updated_at", "2015-05-05 08:10:00.596648"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:10:03 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"0"}, "project_id"=>"46"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 46]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 46]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 46], ["value", 0], ["created_at", "2015-05-05 08:10:03.591845"], ["updated_at", "2015-05-05 08:10:03.591845"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:10:05 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"0"}, "project_id"=>"40"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["team_id", 9], ["project_id", 40], ["value", 0], ["created_at", "2015-05-05 08:10:05.501984"], ["updated_at", "2015-05-05 08:10:05.501984"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:10:08 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"-1"}, "project_id"=>"44"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1[0m  [["user_id", 23]]
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1  [["id", 44]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1[0m  [["team_id", 9], ["project_id", 44]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "preferences" ("team_id", "project_id", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["team_id", 9], ["project_id", 44], ["value", -1], ["created_at", "2015-05-05 08:10:08.610505"], ["updated_at", "2015-05-05 08:10:08.610505"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/preferences" for ::1 at 2015-05-05 03:10:11 -0500
+Processing by PreferencesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw==", "preference"=>{"value"=>"-1"}, "project_id"=>"40"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."user_id" = ? LIMIT 1  [["user_id", 23]]
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ?  ORDER BY "projects"."created_at" DESC LIMIT 1[0m  [["id", 40]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ? AND "preferences"."project_id" = ? LIMIT 1  [["team_id", 9], ["project_id", 40]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "preferences" SET "value" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["value", -1], ["updated_at", "2015-05-05 08:10:11.769817"], ["id", 64]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered preferences/create.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 03:10:15 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yS0Nm8wukaZcvx3bvmjB7e6eJ0sZQd6TGZmNdAR7vXUiUayxYQ9NE+TDxh/KiCwGZBmOP1oHTGq0nu77BqmgZw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 23]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 03:10:15 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 787ms (Views: 786.9ms | ActiveRecord: 0.0ms)
