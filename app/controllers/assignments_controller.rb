@@ -5,7 +5,6 @@ class AssignmentsController < ApplicationController
   def assign
     @teams = Team.all
     @projects = Project.where("approved = ?", true)
-
     @graph = Array.new(@teams.size){Array.new(@projects.size)}
     for i in 0..(@teams.size - 1)
       for j in 0..(@projects.size - 1)
@@ -20,9 +19,25 @@ class AssignmentsController < ApplicationController
         
     @count, @matching = project_assignment(@graph)
 
+    @assignments = []
+    #Clearing Old assignments
+    Assignment.delete_all
     #Store matching in Assignment model
+    for i in 0..@matching.size-1
+      if (@matching[i] != -1)
+        project_index = i
+        team_index = @matching[i]
+        team_no = @teams[team_index].id
+        project_no = @projects[project_index].id
+        project_title = @projects[project_index].title
+        team_name = @teams[team_index].name
+       Assignment.create(team_id: team_no, project_id: project_no)
 
-    @assignments = Assignment.all
+       hash =  {  :project_id => project_no, :team_id => team_no, :project_title => project_title, :team_name => team_name }
+       @assignments << hash
+      end
+    end
+
     
   end
 
