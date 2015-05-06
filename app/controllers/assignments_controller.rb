@@ -125,7 +125,7 @@ class AssignmentsController < ApplicationController
       #Assignment Phase 3 :  Assigning Bottom Projects [ Worst case scenario]
       #=begin
       if matching_count<no_of_groups
-      for i in remaining_groups.size
+      for i in remaining_groups
       if( final_matchings.include? i)
         remaining_groups.delete(i)
       end
