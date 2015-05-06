@@ -4,13 +4,14 @@
   <% if logged_in? %>
   <b>Howdy  <%= current_user.name%> !! </b>
 <% else %> 	        
-
+<img src="/images/checklist.png" alt="Logo" height="20%" width="20%" />
   <h2>Welcome to the </h2>
   <h1>Project Submission <br/>and <br/>Assignment  System</h1>
     <h2>
     If you are a new student, please sign up.
   </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+
+  <%= link_to "Sign Up!", signup_path, class: "btn btn-lg btn-primary" %>
 <% end%>
 
 
