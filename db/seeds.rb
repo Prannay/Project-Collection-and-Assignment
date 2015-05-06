@@ -56,6 +56,7 @@ end
 
 users = User.all
 
+
 20.times do |n|
   name = Faker::Internet.domain_word
   user_id = users[n].id
