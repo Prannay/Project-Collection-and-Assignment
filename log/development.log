@@ -22076,6 +22076,1146 @@ Processing by AssignmentsController#view as HTML
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 614ms (Views: 608.6ms | ActiveRecord: 1.1ms)
 <<<<<<< HEAD
+
+
+Started DELETE "/logout" for ::1 at 2015-05-05 18:02:30 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kehffN6biScBjPFcKs9JCSPdLiZ+hVDViojYk7AWDzNdnNW4o1WsdxI9Mde90o4HzL5iLLNkXR3IiBdreUiuqg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:02:30 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 701ms (Views: 700.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-05 18:02:34 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 552ms (Views: 551.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-05-05 18:02:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"smGbTXj9JaDVFvvoWNs8AI7WomJS2exw6SENzfBGp6F+FRGJBTMA8ManO2PPxvsOYbXuaJ844birIcI1ORgGOA==", "session"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 67ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2015-05-05 18:02:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 617ms (Views: 614.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 18:02:48 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0
+  Rendered teams/_team.html.erb (2.2ms)
+  Rendered teams/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 102]]
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 572ms (Views: 569.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/teams/4" for ::1 at 2015-05-05 18:02:53 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k2ihfwBScsqL6ypG+tX8247R7WBhZoJv4nJttMxs5GVfHCu7fZxXmpha6s1tyDvVYbKhaqyHj6egcqJMBTJF/A==", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 102]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?[0m  [["team_id", 4]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 5]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 9]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?[0m  [["team_id", 4]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 1]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 3]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 4]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 5]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 6]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 7]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 8]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 9]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 10]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 11]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:02:53 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 555ms (Views: 555.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 18:02:57 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0[0m
+  Rendered teams/_team.html.erb (1.2ms)
+  Rendered teams/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 559ms (Views: 556.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/teams/7" for ::1 at 2015-05-05 18:03:00 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l/QVQ5QAwJjruc44sRvbe74zJu6NKBm4qiEGbGkdbChbgJ+H6c7lyPgIDrMmBhx1UVBq5EDJFHDoIcmUoEPNsQ==", "id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?  [["team_id", 7]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 20]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 21]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 22]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 23]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 24]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?  [["team_id", 7]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 33]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 34]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 35]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 36]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 37]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 38]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 39]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 40]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 41]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 42]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 43]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "teams" WHERE "teams"."id" = ?  [["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:00 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 582ms (Views: 581.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 18:03:05 -0500
+Processing by TeamsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "teams"[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0
+  Rendered teams/_team.html.erb (1.3ms)
+  Rendered teams/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 641ms (Views: 639.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/teams/8" for ::1 at 2015-05-05 18:03:18 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gl8j1zx0NYTeT0CF8Qnla7t62Bhqi8AqHeRj+o4b2pxOK6kTQboQ1M3+gA5mFCJlVBmUEqdqzeJf5KwCR0V7BQ==", "id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?[0m  [["team_id", 8]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 25]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 26]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 27]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 28]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 29]]
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?[0m  [["team_id", 8]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 44]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 45]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 46]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 47]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 48]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 49]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 50]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 51]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 52]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 53]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 54]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:18 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 552ms (Views: 552.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/teams/6" for ::1 at 2015-05-05 18:03:25 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gl8j1zx0NYTeT0CF8Qnla7t62Bhqi8AqHeRj+o4b2pxOK6kTQboQ1M3+gA5mFCJlVBmUEqdqzeJf5KwCR0V7BQ==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?  [["team_id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 15]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 16]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 17]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 18]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 19]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?  [["team_id", 6]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 23]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 24]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 25]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 26]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 27]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 28]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 29]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 30]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 31]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 32]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:25 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 587ms (Views: 586.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2015-05-05 18:03:29 -0500
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "teams"
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" LIMIT 30 OFFSET 0[0m
+  Rendered teams/_team.html.erb (0.7ms)
+  Rendered teams/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 551ms (Views: 549.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/assignments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/custom.self-b162a22d8b7755ac173f5643ab5d41d32d7aa5852d8865fd1a9931f638c9d2f4.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/preferences.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/theme.self-9a05097a0bf60f489f0c89e95e5e12dd9a092332f4a18e2e835bc94fe7ca0ffd.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-843e8fe41275fac7212c1564bf97a092377791b8a5b84a92df14d560d1a21dff.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-397ecee50bef09a7cda8c5dfaaa265a62b088bf232f5142cdb51387e5fc62298.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-3a60048eb2ef1aae33d4e8637d4f208bada33f95418017b60e4bdd5a909701f2.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-d7a7db3f93f7dfa449dc3102e7651ea140068ceca343e7b40e4cbb04cb132d78.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-bb8031f2e196f26c242e6093ff5be2facad271ecca7299661d2abdd544734ed7.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-4ef8e935d5844661de4f30a3b86a8559093c04a0638cd1281d509878046cf089.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-a75cc687d9086ab502f231ccbb3f33998d146a2be70c042de3b367fad3e266bc.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-2f7c47a18c55495b988ae9761c56a5ca745f17940314b28adbdfd5473c14d9bc.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-97d90451ed5c9406f435380037255f44bb266b4d2142b618c6c43f875c07ad3d.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-8889c9c9f7075aaa33e573322cb0848887ce5956480fdc09a2b008f79cbf3cb4.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-c6529fccd823f632592b1e289838e8b14e3bddbcfbfee7459ccccddf0fbf5652.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-0d8afd56028f6eecddb82e2f62fd029eabf0a1d18cbd15e810f7bc1ddbc6c391.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-853fa48c47c60dcd304b0f5da0707e1aa4cb5d64f9e9d17cfb3e4c145047cab9.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-1374df29c4b4d30bcc83fd17f8c5cc7456558076482744c812582f988637f95d.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-3d82a9b3101a3389fb04b7d07e9f2e39316982795b773f54db374634b4fbc3a9.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-cbd709931e9bc6c5c1cc9ed1467359b7b79a3eb3024e42a7bb24b46af4d9f40f.css?body=1" for ::1 at 2015-05-05 18:03:29 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-2d638a06afdae775c459cf8ff10b5a804e1ab63d2d06e4381bc64e6c7b958cd9.css?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/base.self-94af08897154ba6b0227c26f91fc8671a3e7e797a8aa1fb801d432089d9d4d9d.css?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/all.self-c677192b48dc1a3b01b47f1fae63a03aef25f170dbf30755ae73a8b89d42afda.css?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-64b590c2d0d95f30c6c4dd0af09f0cde19509c8eff801516c80c98e01ae1b823.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/widget.self-19ca8b140af7fc380cccad5abadcf070daf4952f1402cb83b6199c37549b6d13.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-764a7e11d28d6d92958c3daa40e1fa7bf2799185173f317092b31a5ad5d0d5c0.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/position.self-a22a5a606ac183da99ec7ad8c8aaed4dddeb7d148975c7cd3f65ddffe89f5d8e.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-998833580e11979f6c2226a8910170c8f7d1ef49adc25c33adc7d31cd186220c.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-018c0a14cca97e1c030c519e8a65c4b819080cbd7f0a4810e3bab08698b25bec.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-c3805ba4caf7d6a835e14230e1da60de2827598f5db5becfa06d0a4b6b2daf72.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3f6ef631c1f97b6d552af89b679344cfd849377d115abb96ddba1209ae921c86.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.self-430fd8d1d675b348c742731d5d4f6c91ce8eec3ce751c6783f889f33e9689412.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-18a8d048b203a446b234a59e1b1daeccfce707183171c16826a7761c8bd1af39.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-3477df232aaefa9b0aa3e3551c09f4195acf8e07ab1a82073caeaa6822fe5297.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-ce66b060b6de64ac8efd0b8794647ab61311f6d1edfc200de94e8a8d38b1d929.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.self-9556cdfc79f1ccf8585ac2433eb1222f6919b6677ba0de7a99dbedbc005f6e6b.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect.self-ed20f2e37a1e647de0ef3e9bbe65a99380e2dd936d39d3d06145de97edae30ac.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-8deae34a33e3c94d769bf7bca3ddbbf75c1d78a46b0b0c2d79bd7bac0e5b3a7e.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-0e3e6060d3620ce332b67ad20b613785d079001eac567c75fa0e63f366671c84.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-6a0e7d61574dee3217df433652940406999ebb4f393776aef9527407c1c69970.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-53791a6cbad3356b9ea50661e8764d148f511153bfc8aeed38f48c7a1be9b4f1.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-4db6f58579d7b3cd2fbe5634f0bec051b06eaa7dab6a3d86f57c137d177b24df.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-c2d715d2b630f622381a3bcb8d7ae1d8585a29f3f3f5e1588e05fa25f34cc752.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-5fc651685e38bea0e6f95d70ca0938608a7edfeb4b656080e8bc02106802401e.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-beb721cc108c942f48439ca332dd43a0c068d3bf315b316b1e77c75260910abf.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-f393fc123d0d6dbb88524f5b806154b6040c45bce35b07497b6c4d7ff270ae73.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.self-c3abbe4be67e4cfb38b78584a50d219a7d70b4da4a6b685e201ab38825940b69.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-9608a75f4a0f92000b2d71f31744f988779c3efa2226ea3c78b75142abe84505.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-6817baf88ef127c8c5575cc78e9b231c946d45bbdf3eafdc9752e750378434ab.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-4494318cb68efbf7b940465a4cc04a2e06372784e46793f44e441f9825136df0.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-343043feea780c5f86002b27de240e60af2b3f867c8a4aa9d6941abc2ef165c2.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-3e7cb238817927bf4c3ab5778ad7347ef8302bf2b69d23db7c3b5f2c55561d12.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-06383ab48efb3f2fdf4d58e22c5031c01a777fadcee599fe12bdf419b0fffc8f.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-90a5197016c97a0942a58f479c703556b687ef61f19e72829a4d37e6266c4104.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-9ca09626e98f244e0fcc9192645f428faa56724516d9731c4467bc917c807699.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-d928d8f01bf5df3d6fdf7d2bb095ae34705406df88e9337f603b0a2f4e4e3b2d.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-5b4e6e548c4b5d16d0d7b26c507d3e5abe0fbb814faedf11f73d4a597e7056e7.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-d915c1c503b4d922dffd52fc738d4d9bea0ae0e28fa485c2400e0fa32263cb80.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-8585cdcc7e74fc540e62fdae42601148a7de88e144ea19d92cb22c992b155e44.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-d32db84b490cc79d9cf19ae11deb69fba85f77b011aeaf57ff6909b5008edea8.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/preferences.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:30 -0500
+
+
+Started DELETE "/teams/9" for ::1 at 2015-05-05 18:03:33 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4/4erkEbU6WaGs19Wod7YmYCflAovITQwecRrQv00VMvipRqPNV29YmrDfbNmrxsiWEyWuVdiRiD595Vwqpwyg==", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?  [["team_id", 9]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 30]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 31]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 32]]
+  [1m[35mPreference Load (0.1ms)[0m  SELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?  [["team_id", 9]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 55]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 56]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 57]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 58]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 59]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 60]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 61]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 62]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 63]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 64]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 65]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "teams" WHERE "teams"."id" = ?  [["id", 9]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:33 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1[0m  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 523ms (Views: 522.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/teams/5" for ::1 at 2015-05-05 18:03:39 -0500
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4/4erkEbU6WaGs19Wod7YmYCflAovITQwecRrQv00VMvipRqPNV29YmrDfbNmrxsiWEyWuVdiRiD595Vwqpwyg==", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRelationship Load (0.1ms)[0m  [1mSELECT "relationships".* FROM "relationships" WHERE "relationships"."team_id" = ?[0m  [["team_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 10]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 11]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 12]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 13]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "relationships" WHERE "relationships"."id" = ?  [["id", 14]]
+  [1m[36mPreference Load (0.0ms)[0m  [1mSELECT "preferences".* FROM "preferences" WHERE "preferences"."team_id" = ?[0m  [["team_id", 5]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 12]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 13]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 14]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 15]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 16]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 17]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 18]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 19]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 20]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 21]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 22]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "teams" WHERE "teams"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:39 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 621ms (Views: 620.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:03:40 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 560ms (Views: 560.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/assignments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/custom.self-b162a22d8b7755ac173f5643ab5d41d32d7aa5852d8865fd1a9931f638c9d2f4.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/preferences.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/theme.self-9a05097a0bf60f489f0c89e95e5e12dd9a092332f4a18e2e835bc94fe7ca0ffd.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-843e8fe41275fac7212c1564bf97a092377791b8a5b84a92df14d560d1a21dff.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-397ecee50bef09a7cda8c5dfaaa265a62b088bf232f5142cdb51387e5fc62298.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-3a60048eb2ef1aae33d4e8637d4f208bada33f95418017b60e4bdd5a909701f2.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-d7a7db3f93f7dfa449dc3102e7651ea140068ceca343e7b40e4cbb04cb132d78.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-bb8031f2e196f26c242e6093ff5be2facad271ecca7299661d2abdd544734ed7.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-4ef8e935d5844661de4f30a3b86a8559093c04a0638cd1281d509878046cf089.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-a75cc687d9086ab502f231ccbb3f33998d146a2be70c042de3b367fad3e266bc.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-2f7c47a18c55495b988ae9761c56a5ca745f17940314b28adbdfd5473c14d9bc.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-97d90451ed5c9406f435380037255f44bb266b4d2142b618c6c43f875c07ad3d.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-8889c9c9f7075aaa33e573322cb0848887ce5956480fdc09a2b008f79cbf3cb4.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-c6529fccd823f632592b1e289838e8b14e3bddbcfbfee7459ccccddf0fbf5652.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-0d8afd56028f6eecddb82e2f62fd029eabf0a1d18cbd15e810f7bc1ddbc6c391.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-853fa48c47c60dcd304b0f5da0707e1aa4cb5d64f9e9d17cfb3e4c145047cab9.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-1374df29c4b4d30bcc83fd17f8c5cc7456558076482744c812582f988637f95d.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-3d82a9b3101a3389fb04b7d07e9f2e39316982795b773f54db374634b4fbc3a9.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-cbd709931e9bc6c5c1cc9ed1467359b7b79a3eb3024e42a7bb24b46af4d9f40f.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-2d638a06afdae775c459cf8ff10b5a804e1ab63d2d06e4381bc64e6c7b958cd9.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/base.self-94af08897154ba6b0227c26f91fc8671a3e7e797a8aa1fb801d432089d9d4d9d.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/all.self-c677192b48dc1a3b01b47f1fae63a03aef25f170dbf30755ae73a8b89d42afda.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-64b590c2d0d95f30c6c4dd0af09f0cde19509c8eff801516c80c98e01ae1b823.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/widget.self-19ca8b140af7fc380cccad5abadcf070daf4952f1402cb83b6199c37549b6d13.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-764a7e11d28d6d92958c3daa40e1fa7bf2799185173f317092b31a5ad5d0d5c0.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/position.self-a22a5a606ac183da99ec7ad8c8aaed4dddeb7d148975c7cd3f65ddffe89f5d8e.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-018c0a14cca97e1c030c519e8a65c4b819080cbd7f0a4810e3bab08698b25bec.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-998833580e11979f6c2226a8910170c8f7d1ef49adc25c33adc7d31cd186220c.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-c3805ba4caf7d6a835e14230e1da60de2827598f5db5becfa06d0a4b6b2daf72.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3f6ef631c1f97b6d552af89b679344cfd849377d115abb96ddba1209ae921c86.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.self-430fd8d1d675b348c742731d5d4f6c91ce8eec3ce751c6783f889f33e9689412.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-18a8d048b203a446b234a59e1b1daeccfce707183171c16826a7761c8bd1af39.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-3477df232aaefa9b0aa3e3551c09f4195acf8e07ab1a82073caeaa6822fe5297.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-ce66b060b6de64ac8efd0b8794647ab61311f6d1edfc200de94e8a8d38b1d929.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.self-9556cdfc79f1ccf8585ac2433eb1222f6919b6677ba0de7a99dbedbc005f6e6b.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/effect.self-ed20f2e37a1e647de0ef3e9bbe65a99380e2dd936d39d3d06145de97edae30ac.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-8deae34a33e3c94d769bf7bca3ddbbf75c1d78a46b0b0c2d79bd7bac0e5b3a7e.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-0e3e6060d3620ce332b67ad20b613785d079001eac567c75fa0e63f366671c84.js?body=1" for ::1 at 2015-05-05 18:03:41 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-6a0e7d61574dee3217df433652940406999ebb4f393776aef9527407c1c69970.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-53791a6cbad3356b9ea50661e8764d148f511153bfc8aeed38f48c7a1be9b4f1.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-4db6f58579d7b3cd2fbe5634f0bec051b06eaa7dab6a3d86f57c137d177b24df.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-c2d715d2b630f622381a3bcb8d7ae1d8585a29f3f3f5e1588e05fa25f34cc752.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-5fc651685e38bea0e6f95d70ca0938608a7edfeb4b656080e8bc02106802401e.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-beb721cc108c942f48439ca332dd43a0c068d3bf315b316b1e77c75260910abf.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.self-c3abbe4be67e4cfb38b78584a50d219a7d70b4da4a6b685e201ab38825940b69.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-f393fc123d0d6dbb88524f5b806154b6040c45bce35b07497b6c4d7ff270ae73.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-9608a75f4a0f92000b2d71f31744f988779c3efa2226ea3c78b75142abe84505.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-6817baf88ef127c8c5575cc78e9b231c946d45bbdf3eafdc9752e750378434ab.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-4494318cb68efbf7b940465a4cc04a2e06372784e46793f44e441f9825136df0.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-343043feea780c5f86002b27de240e60af2b3f867c8a4aa9d6941abc2ef165c2.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-3e7cb238817927bf4c3ab5778ad7347ef8302bf2b69d23db7c3b5f2c55561d12.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-06383ab48efb3f2fdf4d58e22c5031c01a777fadcee599fe12bdf419b0fffc8f.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-9ca09626e98f244e0fcc9192645f428faa56724516d9731c4467bc917c807699.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-90a5197016c97a0942a58f479c703556b687ef61f19e72829a4d37e6266c4104.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-d928d8f01bf5df3d6fdf7d2bb095ae34705406df88e9337f603b0a2f4e4e3b2d.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-5b4e6e548c4b5d16d0d7b26c507d3e5abe0fbb814faedf11f73d4a597e7056e7.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-d915c1c503b4d922dffd52fc738d4d9bea0ae0e28fa485c2400e0fa32263cb80.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-8585cdcc7e74fc540e62fdae42601148a7de88e144ea19d92cb22c992b155e44.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-d32db84b490cc79d9cf19ae11deb69fba85f77b011aeaf57ff6909b5008edea8.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/preferences.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-05 18:03:42 -0500
+
+
+Started GET "/" for ::1 at 2015-05-05 18:27:24 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 676ms (Views: 674.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:27:37 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 670ms (Views: 669.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-05 18:29:33 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mRelationship Load (0.1ms)[0m  SELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."user_id" = ? LIMIT 1  [["user_id", 1], ["user_id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 577ms (Views: 576.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/assignments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/custom.self-b162a22d8b7755ac173f5643ab5d41d32d7aa5852d8865fd1a9931f638c9d2f4.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/preferences.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/relationships.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/jquery-ui/theme.self-9a05097a0bf60f489f0c89e95e5e12dd9a092332f4a18e2e835bc94fe7ca0ffd.css?body=1" for ::1 at 2015-05-05 18:29:33 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-843e8fe41275fac7212c1564bf97a092377791b8a5b84a92df14d560d1a21dff.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-397ecee50bef09a7cda8c5dfaaa265a62b088bf232f5142cdb51387e5fc62298.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-3a60048eb2ef1aae33d4e8637d4f208bada33f95418017b60e4bdd5a909701f2.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-d7a7db3f93f7dfa449dc3102e7651ea140068ceca343e7b40e4cbb04cb132d78.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-bb8031f2e196f26c242e6093ff5be2facad271ecca7299661d2abdd544734ed7.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-4ef8e935d5844661de4f30a3b86a8559093c04a0638cd1281d509878046cf089.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-a75cc687d9086ab502f231ccbb3f33998d146a2be70c042de3b367fad3e266bc.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-2f7c47a18c55495b988ae9761c56a5ca745f17940314b28adbdfd5473c14d9bc.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-97d90451ed5c9406f435380037255f44bb266b4d2142b618c6c43f875c07ad3d.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-8889c9c9f7075aaa33e573322cb0848887ce5956480fdc09a2b008f79cbf3cb4.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-c6529fccd823f632592b1e289838e8b14e3bddbcfbfee7459ccccddf0fbf5652.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-0d8afd56028f6eecddb82e2f62fd029eabf0a1d18cbd15e810f7bc1ddbc6c391.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-853fa48c47c60dcd304b0f5da0707e1aa4cb5d64f9e9d17cfb3e4c145047cab9.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-1374df29c4b4d30bcc83fd17f8c5cc7456558076482744c812582f988637f95d.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-3d82a9b3101a3389fb04b7d07e9f2e39316982795b773f54db374634b4fbc3a9.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-cbd709931e9bc6c5c1cc9ed1467359b7b79a3eb3024e42a7bb24b46af4d9f40f.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-2d638a06afdae775c459cf8ff10b5a804e1ab63d2d06e4381bc64e6c7b958cd9.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/base.self-94af08897154ba6b0227c26f91fc8671a3e7e797a8aa1fb801d432089d9d4d9d.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/all.self-c677192b48dc1a3b01b47f1fae63a03aef25f170dbf30755ae73a8b89d42afda.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/core.self-64b590c2d0d95f30c6c4dd0af09f0cde19509c8eff801516c80c98e01ae1b823.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/widget.self-19ca8b140af7fc380cccad5abadcf070daf4952f1402cb83b6199c37549b6d13.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/accordion.self-764a7e11d28d6d92958c3daa40e1fa7bf2799185173f317092b31a5ad5d0d5c0.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/position.self-a22a5a606ac183da99ec7ad8c8aaed4dddeb7d148975c7cd3f65ddffe89f5d8e.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/menu.self-998833580e11979f6c2226a8910170c8f7d1ef49adc25c33adc7d31cd186220c.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-018c0a14cca97e1c030c519e8a65c4b819080cbd7f0a4810e3bab08698b25bec.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/button.self-c3805ba4caf7d6a835e14230e1da60de2827598f5db5becfa06d0a4b6b2daf72.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/datepicker.self-3f6ef631c1f97b6d552af89b679344cfd849377d115abb96ddba1209ae921c86.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/mouse.self-430fd8d1d675b348c742731d5d4f6c91ce8eec3ce751c6783f889f33e9689412.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/draggable.self-18a8d048b203a446b234a59e1b1daeccfce707183171c16826a7761c8bd1af39.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/resizable.self-3477df232aaefa9b0aa3e3551c09f4195acf8e07ab1a82073caeaa6822fe5297.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/dialog.self-ce66b060b6de64ac8efd0b8794647ab61311f6d1edfc200de94e8a8d38b1d929.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/droppable.self-9556cdfc79f1ccf8585ac2433eb1222f6919b6677ba0de7a99dbedbc005f6e6b.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect.self-ed20f2e37a1e647de0ef3e9bbe65a99380e2dd936d39d3d06145de97edae30ac.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-blind.self-8deae34a33e3c94d769bf7bca3ddbbf75c1d78a46b0b0c2d79bd7bac0e5b3a7e.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-bounce.self-0e3e6060d3620ce332b67ad20b613785d079001eac567c75fa0e63f366671c84.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-clip.self-6a0e7d61574dee3217df433652940406999ebb4f393776aef9527407c1c69970.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-drop.self-53791a6cbad3356b9ea50661e8764d148f511153bfc8aeed38f48c7a1be9b4f1.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-explode.self-4db6f58579d7b3cd2fbe5634f0bec051b06eaa7dab6a3d86f57c137d177b24df.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fade.self-c2d715d2b630f622381a3bcb8d7ae1d8585a29f3f3f5e1588e05fa25f34cc752.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-fold.self-5fc651685e38bea0e6f95d70ca0938608a7edfeb4b656080e8bc02106802401e.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-highlight.self-beb721cc108c942f48439ca332dd43a0c068d3bf315b316b1e77c75260910abf.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-size.self-c3abbe4be67e4cfb38b78584a50d219a7d70b4da4a6b685e201ab38825940b69.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-scale.self-f393fc123d0d6dbb88524f5b806154b6040c45bce35b07497b6c4d7ff270ae73.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-puff.self-9608a75f4a0f92000b2d71f31744f988779c3efa2226ea3c78b75142abe84505.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-pulsate.self-6817baf88ef127c8c5575cc78e9b231c946d45bbdf3eafdc9752e750378434ab.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-shake.self-4494318cb68efbf7b940465a4cc04a2e06372784e46793f44e441f9825136df0.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-slide.self-343043feea780c5f86002b27de240e60af2b3f867c8a4aa9d6941abc2ef165c2.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/effect-transfer.self-3e7cb238817927bf4c3ab5778ad7347ef8302bf2b69d23db7c3b5f2c55561d12.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/progressbar.self-06383ab48efb3f2fdf4d58e22c5031c01a777fadcee599fe12bdf419b0fffc8f.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/selectable.self-9ca09626e98f244e0fcc9192645f428faa56724516d9731c4467bc917c807699.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/selectmenu.self-90a5197016c97a0942a58f479c703556b687ef61f19e72829a4d37e6266c4104.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/slider.self-d928d8f01bf5df3d6fdf7d2bb095ae34705406df88e9337f603b0a2f4e4e3b2d.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/sortable.self-5b4e6e548c4b5d16d0d7b26c507d3e5abe0fbb814faedf11f73d4a597e7056e7.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/spinner.self-d915c1c503b4d922dffd52fc738d4d9bea0ae0e28fa485c2400e0fa32263cb80.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/tabs.self-8585cdcc7e74fc540e62fdae42601148a7de88e144ea19d92cb22c992b155e44.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui/tooltip.self-d32db84b490cc79d9cf19ae11deb69fba85f77b011aeaf57ff6909b5008edea8.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/preferences.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/relationships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for ::1 at 2015-05-05 18:29:34 -0500
+=======
+<<<<<<< HEAD
   [1m[36m (106.5ms)[0m  [1mCREATE TABLE "assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "team_id" integer, "project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (100.2ms)[0m  [1mCREATE  INDEX "index_assignments_on_project_id" ON "assignments" ("project_id")[0m
@@ -28908,6 +30048,7 @@ Completed 200 OK in 1319ms (Views: 1315.2ms | ActiveRecord: 0.7ms)
 =======
 >>>>>>> a90a94682e4cb6b9a947f3a3d514a4f1d8b4f2cf
 >>>>>>> e2dce5c3eecfc954ecbbf9bcde554e902abce529
+<<<<<<< HEAD
   [1m[36m (87.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (75.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
@@ -33842,3 +34983,6 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (2.6ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 765ms (Views: 764.0ms | ActiveRecord: 0.2ms)
+=======
+>>>>>>> 6144b09618f098261bd5a8febc7d9c874e37b0f9
+>>>>>>> 41b5d1d3585c4ce8f4e785418055aa6d94c36b8e
