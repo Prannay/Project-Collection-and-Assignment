@@ -71,16 +71,16 @@ projects=Project.where("approved = ?", true)
 rnd = Random.new
 
 teams.each do |t|
-  count = 0
+  #count = 0
   projects.each do |p|
-    #value = rnd.rand(-1..1)
-    value = 0
-    if count < 5
-      value = 1
-    elsif count >= 15
-      value = -1
-    end
-    count += 1
+    value = rnd.rand(-1..1)
+    #value = 0
+    #if count < 5
+    #  value = 1
+    #elsif count >= 15
+    #  value = -1
+    #end
+    #count += 1
     Preference.create!(team_id: t.id,
 		       project_id: p.id,
 		       value: value)
