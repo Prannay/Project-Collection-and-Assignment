@@ -30,6 +30,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'devise'
 end
 
 group :production do
