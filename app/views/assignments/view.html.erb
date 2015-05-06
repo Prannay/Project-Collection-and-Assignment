@@ -1,29 +1,41 @@
 <% provide(:title, 'Project Assignment Details') %>
 <h1>Assignement Details</h1>
 <div class="row">
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-10 col-md-offset-1">
 
 <ul class="projects">
 	<li>
-		<div class="col-md-8">
+		<div class="col-md-6">
     		<h2>Project Title</h2>
   		</div>
 
-  		<div class="col-md-2">
+  		<div class="col-md-3">
   	  		<h2>Team Assignmed</h2>
+		</div>
+		<div class="col-md-1">
+  	  		<h2>Preference</h2>
 		</div>
 	</li>
     <% for i in 0..(@assignments.size-1)%>
 	  	<li>
-	  		<div class="col-md-8">
+	  		<div class="col-md-6">
 	  			<a href="projects/<%=@assignments[i][:project_id]%>">
 	  			<%=@assignments[i][:project_title]%>
 	  			</a>
 	  		</div>
-	  		<div class="col-md-4">
+	  		<div class="col-md-3">
 	  			<a href="teams/<%=@assignments[i][:team_id]%>">
 	  			<%= @assignments[i][:team_name]%>
 	  			</a>
+	  		</div>
+	  		<div class="col-md-1">
+	  			<% pref = Preference.find_by(team_id: @assignments[i][:team_id], project_id: @assignments[i][:project_id]) %>
+	  			<% pref_name = {-1 => "Bottom", 0 => "Neutral", 1 => "Top"} %>
+	  			<% if pref %>
+	  				<%= pref_name[pref.value] %>
+	  			<% else %>
+	  				<%= pref_name[0] %>
+	  			<% end %>
 	  		</div>
 	  	</li>
   	<% end %>
