@@ -1,30 +1,33 @@
 <% provide(:title, 'Project Assignment Details') %>
 <h1>Assignement Details</h1>
-<h2>  <% if current_user.admin? && !current_user?(@user) %>
-	<div class="row">
-	  <div class="col-md-6 col-md-offset-3">
-      	<table class="table">
-	  <tr>
-	  	<th> Project Name</th>
-	  	<td>&emsp;</td>
-	  	<th>Assigned Team</th>
-	  </tr>
-	  <tr>
-      	<% for i in 0..(@assignments.size-1)%>
-	  	<td><a href="projects/<%=@assignments[i][:project_id]%>">
-	  	<%=@assignments[i][:project_title]%>
-	  	</a></td>
-	  	<td>&emsp;</td>
-	  	<td><a href="teams/<%=@assignments[i][:team_id]%>">
-	  	<%= @assignments[i][:team_name]%>
-	  	</a></td>
-	  </tr>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+<ul class="projects">
+	<li>
+		<div class="col-md-8">
+    		<h2>Project Title</h2>
+  		</div>
+
+  		<div class="col-md-2">
+  	  		<h2>Team Assignmed</h2>
+		</div>
+	</li>
+    <% for i in 0..(@assignments.size-1)%>
+	  	<li>
+	  		<div class="col-md-8">
+	  			<a href="projects/<%=@assignments[i][:project_id]%>">
+	  			<%=@assignments[i][:project_title]%>
+	  			</a>
+	  		</div>
+	  		<div class="col-md-4">
+	  			<a href="teams/<%=@assignments[i][:team_id]%>">
+	  			<%= @assignments[i][:team_name]%>
+	  			</a>
+	  		</div>
+	  	</li>
   	<% end %>
-	</table>
-
-	</div>
-	</div>
-
-  <% end %>
-</h2>
+</ul>
+</div>
+</div>
 
