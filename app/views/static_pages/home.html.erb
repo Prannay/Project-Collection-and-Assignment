@@ -1,5 +1,4 @@
-<div class="center jumbotron">
- 
+<div class = "center jumbotron"> 
 
  <% if logged_in? %>
   <b>Howdy  <%= current_user.name%> !! </b>
@@ -14,12 +13,13 @@
   </h2>
 
   <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
 <div class="col-md-4">
 
   <h2> If you are already registered, please log in.</h2>
   <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
-<% end%>
-</div>
 </div>
 
+</div>
+
+<% end %>
+</div>
