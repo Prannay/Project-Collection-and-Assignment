@@ -6,11 +6,21 @@ class AssignmentsController < ApplicationController
     @assignments = []
     assign = Assignment.all
     i=1
-    data = []
+    data = "SNo, Team, Project Title, Organization, Contact, Description, On Campus, Legacy SW, \n"
     assign.each do |a|
       @project = Project.find_by(id: a.project_id)
       @team = Team.find_by(id: a.team_id)
-      data << [i, @project.organization, @project.description, @project.oncampus, @project.islegacy, @team.name]
+      if @project.islegacy.to_s == "true"
+        legacy="Yes"
+      else
+        legacy="No"
+      end
+      if @project.oncampus.to_s == "true"
+        oncampus="Yes"
+      else
+        oncampus="No"
+      end
+      data << i.to_s << "," << @team.name.to_s.inspect << "," << @project.title << "," << @project.organization.to_s.inspect << "," << @project.contact.to_s.inspect << ","<< @project.description.to_s.inspect << "," << oncampus.to_s << "," << legacy.to_s << "\n"
       i+=1
     end
     send_data data, filename: 'output.csv'
