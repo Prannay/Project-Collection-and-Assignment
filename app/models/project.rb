@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
-  has_many :relationships, dependent: :destroy
-  has_many :bidders, through: :relationships, source: :team
+  has_many :preferences, dependent: :destroy
+  has_many :bidders, through: :preferences, source: :team
 
   validates :title, presence: true
   validates :organization, presence: true
