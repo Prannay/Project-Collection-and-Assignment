@@ -1,0 +1,35 @@
+<% provide(:title, 'Preassign Project') %>
+<h1><%= @title %> "<%= @team.name %>"</h1>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<ul class="projects">
+    <li>
+		<div class="col-md-9">
+    		<h2>Project Title</h2>
+		</div>
+		<div class="col-md-1">
+  	  		<h2>Select</h2>
+		</div>
+	</li>
+	  <%= form_for(:projname) do |f| %>
+      <% for i in 0..(@pre_projects.size-1)%>
+	  	  <li>
+	  		  <div class="col-md-9">
+	  		    <a href="projects/<%=@pre_projects[i].id%>">
+	  			    <%=@pre_projects[i].title%>
+	  			  </a>
+	  		  </div>
+	  		  <div class="col-md-1">
+	  		    <%= f.radio_button :value, i %>
+	 		    
+	  		  </div>
+	  	  </li>
+  	  <% end %>
+  	  <div class="col-md-6 col-md-offset-3">
+  	    <%= f.submit "Select", class: "btn btn-primary"  %>
+  	  </div>
+  	  
+    <% end %>
+</ul>
+</div>
+</div>

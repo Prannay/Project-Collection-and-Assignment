@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users
   resources :projects
-
   resources :projects do
     member do
       get :approve, :unapprove
@@ -41,10 +40,17 @@ Rails.application.routes.draw do
   delete 'leaveteam' => 'relationships#destroy'
 
   resources :preferences, only: [:create]
-
   get 'assign' => 'assignments#assign'
   get 'viewassign' => 'assignments#view'
   get 'download' => 'assignments#download'
+  
+  resources :preassignments
+  get 'preassign' => 'preassignments#new'
+  post 'preassign' => 'preassignments#create'
+  get 'preassignment' => 'preassignments#show'
+  post 'preassignment' => 'preassignments#view'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
