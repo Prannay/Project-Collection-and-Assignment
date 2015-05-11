@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get    'resetDB' => 'reset#downloadAndReset'
   resources :users
   resources :projects
   resources :projects do
@@ -49,7 +50,6 @@ Rails.application.routes.draw do
   post 'preassign' => 'preassignments#create'
   get 'preassignment' => 'preassignments#show'
   post 'preassignment' => 'preassignments#view'
-  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
