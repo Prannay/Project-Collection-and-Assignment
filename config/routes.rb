@@ -45,10 +45,11 @@ Rails.application.routes.draw do
   get 'download' => 'assignments#download'
   
   resources :preassignments
-  get 'preassign' => 'preassignments#new'
-  post 'preassign' => 'preassignments#create'
   get 'preassignment' => 'preassignments#show'
   post 'preassignment' => 'preassignments#view'
+  get 'preassign' => 'preassignments#new'
+  post 'preassign' => 'preassignments#create'
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.

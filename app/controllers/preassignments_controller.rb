@@ -19,40 +19,54 @@ class PreassignmentsController < ApplicationController
     if params[:projname]
       @@project = @@pre_projects[params[:projname][:value].to_i]
       @project = @@project
-      @team = @@teamn
-      if @team.name
-        @preassign = Preassignment.new do |p|
-          p.team_id = @team.id
-          p.project_id = @project.id
-        end
-        if @preassign.save
-          pre=Preassignment.all
-          pre.each do |p|
-            puts p.project_id
-            puts p.team_id
-          end
-          flash[:success] = "Team \"" + @team.name + "\" has been preassigned project \"" +  @project.title + "\""
-          redirect_to '/preassignment'
-        else
-          render 'new'
-        end
+      @preproj = Preassignment.find_by(project_id: @project.id)
+      if(@preproj)
+        flash[:danger] = "Project \'#{@project.title}\' already preassigned. Please select different project"
+        redirect_to '/preassignment'
       else
-        flash[:danger] = "Please select team name"
-        redirect_to '/preassign'
-      end
-    else
-      flash[:danger] = "Please select project name"
-      redirect_to '/preassignment'
-    end
-  end
+        @team = @@teamn
+        if @team.name
+					@preteam = Preassignment.find_by(team_id: @team.id)
+					if(@preteam)
+            @preteam.project_id = @project.id
+            if @preteam.save
+              flash[:success] = "Team \"" + @team.name + "\" has been updated with preassigned project \"" +  @project.title + "\""
+              redirect_to '/preassignment'
+            else
+              flash.now[:danger] = "Some problem occured while saving to database"
+              render 'new'
+            end
+          else
+            @preassign = Preassignment.new do |p|
+							p.team_id = @team.id
+							p.project_id = @project.id
+						end
+						if @preassign.save
+							flash[:success] = "Team \"" + @team.name + "\" has been preassigned project \"" +  @project.title + "\""
+							redirect_to '/preassignment'
+						else
+							flash.now[:danger] = "Some problem occured while saving to database"
+							render 'new'
+						end
+					end #preteam
+				else
+					flash.now[:danger] = "Please select team name"
+					render 'new'
+				end #team name
+			end	#preproj
+		else
+			flash[:danger] = "Please select project name"
+			redirect_to '/preassignment'
+		end #proj
+  end #def
   
   def create
     @@teamn = Team.find_by(name: params[:teamname][:name])
-    if @@teamn
+    if @@teamn.name
       redirect_to '/preassignment'
     else
-      flash[:danger] = "Please give correct team name"
-      redirect_to '/preassign'
+      flash.now[:danger] = "Please give correct team name"
+      render 'new'
     end
   end
   
