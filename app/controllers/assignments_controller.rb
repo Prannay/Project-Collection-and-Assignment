@@ -24,7 +24,7 @@ class AssignmentsController < ApplicationController
       i+=1
     end
     date = Time.now.strftime("%Y%m")
-    send_data data, filename: 'project-assignment-#{date}.csv'
+    send_data data, filename: "project-assignment-#{date}.csv"
   end
   
   def assign
