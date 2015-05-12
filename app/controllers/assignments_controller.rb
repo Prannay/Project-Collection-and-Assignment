@@ -6,7 +6,7 @@ class AssignmentsController < ApplicationController
     @assignments = []
     assign = Assignment.all
     i=1
-    data = "SNo, Team, Project Title, Organization, Contact, Description, On Campus, Legacy SW, \n"
+    data = "SNo, Team, Project Title, Organization, Contact, Description, On Campus, Legacy SW\n"
     assign.each do |a|
       @project = Project.find_by(id: a.project_id)
       @team = Team.find_by(id: a.team_id)
@@ -23,7 +23,8 @@ class AssignmentsController < ApplicationController
       data << i.to_s << "," << @team.name.to_s.inspect << "," << @project.title << "," << @project.organization.to_s.inspect << "," << @project.contact.to_s.inspect << ","<< @project.description.to_s.inspect << "," << oncampus.to_s << "," << legacy.to_s << "\n"
       i+=1
     end
-    send_data data, filename: 'output.csv'
+    date = Time.now.strftime("%Y%m")
+    send_data data, filename: "project-assignment-#{date}.csv"
   end
   
   def assign
