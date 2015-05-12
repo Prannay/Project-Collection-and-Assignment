@@ -62,7 +62,7 @@ class PreassignmentsController < ApplicationController
   
   def create
     @@teamn = Team.find_by(name: params[:teamname][:name])
-    if @@teamn.name
+    if @@teamn
       redirect_to '/preassignment'
     else
       flash.now[:danger] = "Please give correct team name"

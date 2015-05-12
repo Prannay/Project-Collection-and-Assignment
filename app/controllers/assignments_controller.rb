@@ -29,6 +29,20 @@ class AssignmentsController < ApplicationController
   def assign
     @teams = Team.all
     @projects = Project.where("approved = ?", true)
+    @preassign = Preassignment.all
+    @preassign.each do |p|
+      @preproj = Project.find_by(id: p.project_id)
+      @projects << @preproj
+      pref = Preference.find_by(team_id: p.team_id, project_id: p.project_id)
+      if !pref
+        @pref = Preference.new do |prf|
+          prf.team_id = p.team_id
+          prf.project_id = p.project_id
+          prf.value = 1
+        end
+        @pref.save
+      end
+    end
     @graph = Array.new(@teams.size){Array.new(@projects.size)}
     for i in 0..(@teams.size - 1)
       for j in 0..(@projects.size - 1)

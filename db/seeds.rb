@@ -66,7 +66,20 @@ users = User.all
 end
 
 teams=Team.all
+proj=Project.where("approved = ?", false)
+3.times do |n|
+  preassign = Preassignment.new do |p|
+    p.team_id = teams[n+1].id
+    p.project_id = proj[n+1].id
+  end
+  preassign.save
+end
 
+preassign = Preassignment.all
+preassign.each do |p|
+  preteam = Team.find_by(id: p.team_id)
+  teams -= [preteam]
+end
 projects=Project.where("approved = ?", true)
 rnd = Random.new
 
