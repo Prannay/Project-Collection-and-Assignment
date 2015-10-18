@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20150510080006) do
   create_table "preassignments", force: :cascade do |t|
     t.integer  "team_id"
     t.integer  "project_id"
-    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

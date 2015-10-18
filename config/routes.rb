@@ -44,14 +44,14 @@ Rails.application.routes.draw do
   get 'assign' => 'assignments#assign'
   get 'viewassign' => 'assignments#view'
   get 'download' => 'assignments#download'
-  
+
   resources :preassignments
   get 'preassignment' => 'preassignments#show'
   post 'preassignment' => 'preassignments#view'
   get 'preassign' => 'preassignments#new'
   post 'preassign' => 'preassignments#create'
-  
-  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
