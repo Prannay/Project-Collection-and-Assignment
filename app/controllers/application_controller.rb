@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
                 before_filter CASClient::Frameworks::Rails::Filter, :unless => :skip_login?
         end
 
+        # determine if the controller is unprotected by CAS
         protected
         def skip_login?
                 CAS_WHITE_LIST.include? params[:controller]
