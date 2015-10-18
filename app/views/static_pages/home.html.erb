@@ -1,25 +1,16 @@
 <div class = "center jumbotron"> 
 
- <% if logged_in? %>
+  <% if logged_in? %>
   <b>Howdy  <%= current_user.name%> !! </b>
-<% else %> 	        
-<img src="/images/checklist.png" alt="Logo" height="15%" width="15%" />
+  <% else %> 	        
+  <img src="/images/checklist.png" alt="Logo" height="15%" width="15%" />
   <h2>Welcome to the </h2>
   <h3>Project Submission and Assignment System</h3>
   <div class="row">
-  <div class="col-md-4 col-md-offset-2">
-   <h2>
-    If you are a new student, please sign up.
-  </h2>
-  <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<div class="col-md-4">
+    <h2> Please use NetID to get started.</h2>
+    <%= link_to "Log In with NetID", login_path, class: "btn btn-lg btn-primary" %>
 
-  <h2> If you are already registered, please log in.</h2>
-  <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
-</div>
+  </div>
 
-</div>
-
-<% end %>
+  <% end %>
 </div>

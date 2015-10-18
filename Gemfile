@@ -14,8 +14,12 @@ gem 'jquery-rails',         '4.0.3'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'jquery-ui-rails'
+gem 'rb-readline'
+gem 'rubycas-client', :git => 'git://github.com/rubycas/rubycas-client.git'
+
 
 group :development, :test do
+  gem 'quiet_assets'
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
