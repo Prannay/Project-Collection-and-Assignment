@@ -1,6 +1,6 @@
 #Project Collection and Assignment
 
-This is a fork of "Project Collection and Assignment", which is being developed by the SunshineAggies team.
+This is a fork of "Project Collection and Assignment". Now [SunshineAggies] team is adding more features to it.
 
 ===================
 #### Update at 10/25/2015
