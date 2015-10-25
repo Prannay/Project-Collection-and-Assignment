@@ -5,11 +5,13 @@ This is a fork of "Project Collection and Assignment", which is being developed 
 ===================
 #### Update at 10/25/2015
 
-More user stories are implemented. A new webpage for students is created, where students can view their project and upload related files. This can be accessed by clicking My Account > My Project on the header.
+More user stories are implemented. 
 
-Now admin can also add any project folders. 
+ - A new webpage for students is created, where students can view their project and upload related files. This can be accessed by clicking My Account > My Project on the header.
 
-Some new columns are also added to projects table to give more details. 
+ - Now admin can also add any project folders. 
+
+ - Some new columns are also added to projects table to give more details. 
 
 
 
