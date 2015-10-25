@@ -2,6 +2,16 @@
 
 This is a fork of "Project Collection and Assignment", which is being developed by the SunshineAggies team.
 
+===================
+#### Update at 10/25/2015
+
+More user stories are implemented. A new webpage for students is created, where students can view their project and upload related files. This can be accessed by clicking My Account > My Project on the header.
+
+Now admin can also add any project folders. 
+
+Some new columns are also added to projects table to give more details. 
+
+
 
 ===================
 #### Update at 10/15/2015
