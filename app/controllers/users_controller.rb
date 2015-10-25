@@ -82,66 +82,39 @@ class UsersController < ApplicationController
 
 		if iteration0 != nil
 			@project.iteration0 = iteration0.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, iteration0.original_filename.to_s), 'wb') do |file|
-				file.write(iteration0.read)
-			end
-			flash[:success] = iteration0.original_filename.to_s + " uploaded"
+			upload_file(iteration0)
 		end
 		if iteration1 != nil
 			@project.iteration1 = iteration1.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, iteration1.original_filename.to_s), 'wb') do |file|
-				file.write(iteration1.read)
-			end
-			flash[:success] = iteration1.original_filename.to_s + " uploaded"
+			upload_file(iteration1)
 		end
 		if iteration2 != nil
 			@project.iteration2 = iteration2.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, iteration2.original_filename.to_s), 'wb') do |file|
-				file.write(iteration2.read)
-			end
-			flash[:success] = iteration2.original_filename.to_s + " uploaded"
+			upload_file(iteration2)
 		end
 		if iteration3 != nil
 			@project.iteration3 = iteration3.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, iteration3.original_filename.to_s), 'wb') do |file|
-				file.write(iteration3.read)
-			end
-			flash[:success] = iteration3.original_filename.to_s + " uploaded"
+			upload_file(iteration3)
 		end
 		if iteration4 != nil
 			@project.iteration4 = iteration4.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, iteration4.original_filename.to_s), 'wb') do |file|
-				file.write(iteration4.read)
-			end
-			flash[:success] = iteration4.original_filename.to_s + " uploaded"
+			upload_file(iteration4)
 		end
 		if poster != nil
 			@project.poster = poster.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, poster.original_filename.to_s), 'wb') do |file|
-				file.write(poster.read)
-			end
-			flash[:success] = poster.original_filename.to_s + " uploaded"
+			upload_file(poster)
 		end
 		if first_video != nil
 			@project.first_video = first_video.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, first_video.original_filename.to_s), 'wb') do |file|
-				file.write(first_video.read)
-			end
-			flash[:success] = first_video.original_filename.to_s + " uploaded"
+			upload_file(first_video)
 		end
 		if final_video != nil
 			@project.final_video = final_video.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, final_video.original_filename.to_s), 'wb') do |file|
-				file.write(final_video.read)
-			end
-			flash[:success] = final_video.original_filename.to_s + " uploaded"
+			upload_file(final_video)
 		end
 		if final_report != nil
 			@project.final_report = final_report.original_filename.to_s
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, final_report.original_filename.to_s), 'wb') do |file|
-				file.write(final_report.read)
-			end
-			flash[:success] = final_report.original_filename.to_s + " uploaded"
+			upload_file(final_report)
 		end
 		@project.save
 		

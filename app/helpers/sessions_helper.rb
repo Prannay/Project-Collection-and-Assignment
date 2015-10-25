@@ -117,4 +117,11 @@ module SessionsHelper
 				return true
 			end
 		end
+
+		def upload_file(f)
+			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, f.original_filename.to_s), 'wb') do |file|
+				file.write(f.read)
+			end
+			flash[:success] = f.original_filename.to_s + " uploaded"
+		end
 end
