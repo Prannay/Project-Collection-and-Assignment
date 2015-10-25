@@ -27,6 +27,13 @@ Rails.application.routes.draw do
   get 'approved_projects' => "projects#approved"
   get 'unapproved_projects' => "projects#unapproved"
 
+	resources :users do
+		get :project
+		post :upload
+		get :download
+		get :admin_download
+	end
+
   resources :teams
 
   resources :teams do

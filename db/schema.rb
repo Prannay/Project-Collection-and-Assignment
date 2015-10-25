@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150510080006) do
+ActiveRecord::Schema.define(version: 20151024235942) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "team_id"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20150510080006) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "approved",     default: false
+    t.string   "iteration0"
+    t.string   "iteration1"
+    t.string   "iteration2"
+    t.string   "iteration3"
+    t.string   "iteration4"
+    t.string   "first_video"
+    t.string   "final_video"
+    t.string   "final_report"
+    t.string   "poster"
+    t.string   "source_code"
   end
 
   create_table "relationships", force: :cascade do |t|
