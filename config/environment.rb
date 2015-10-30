@@ -9,5 +9,5 @@ require 'casclient'
 require 'casclient/frameworks/rails/filter'
 
 CASClient::Frameworks::Rails::Filter.configure(
-  :cas_base_url => "https://csce606.herokuapp.com"
+  :cas_base_url => "https://cas-dev.tamu.edu/cas/"
 )
