@@ -49,6 +49,7 @@ class TeamsController < ApplicationController
   	  @team.code = ('a'..'z').to_a.shuffle.take(4).join()
       if @team.save
         current_user.join_team(@team)
+		Dir.mkdir './public/uploads/'+@team.id.to_s
         flash[:success] = "Team created Successfully"
         redirect_to @team
       else

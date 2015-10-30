@@ -1,0 +1,4 @@
+class AddProjectDetailsToProjects < ActiveRecord::Migration
+  def change
+  end
+end
