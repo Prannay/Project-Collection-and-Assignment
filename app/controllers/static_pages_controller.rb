@@ -1,3 +1,4 @@
+require 'securerandom'
 class StaticPagesController < ApplicationController
   def home
   end
@@ -22,7 +23,8 @@ class StaticPagesController < ApplicationController
 			remember(user)
 			redirect_back_or user
 		else
-			user = User.new(:email => email)
+			passwd = SecureRandom.hex
+			user = User.new(:name => "Please Update", :email => email, :password_digest => passwd)	
 		  if user.save
 		     log_in user
 		     flash[:success] = "Welcome to the ProjectApp"
