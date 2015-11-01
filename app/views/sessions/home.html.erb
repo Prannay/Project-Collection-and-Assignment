@@ -1,0 +1,15 @@
+<div class = "center jumbotron"> 
+
+  <% if logged_in? %>
+  <b>Howdy  <%= current_user.name%> !! </b>
+  <% else %> 	        
+  <img src="/images/checklist.png" alt="Logo" height="15%" width="15%" />
+  <h2>Welcome to the </h2>
+  <h3>Project Submission and Assignment System</h3>
+  <div class="row">
+    <%= link_to "Log In with NetID", login_netid_path, class: "btn btn-lg btn-primary" %>
+	<%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
+  </div>
+
+  <% end %>
+</div>

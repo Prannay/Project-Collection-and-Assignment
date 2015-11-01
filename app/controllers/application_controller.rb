@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
         # Configuration
         #       - CAS_ENABLED   : If you would like to disable CAS, you can make CAS_ENABLED false
         #       - CAS_WHITE_LIST: All webpages that will not be protected by CAS
-        CAS_ENABLED     = false
-        CAS_WHITE_LIST  = ["static_pages"]
+        CAS_ENABLED     = true
+        CAS_WHITE_LIST  = ["application", "assignments", "preassignments", "preferences", "projects", "relationships", "reset", "sessions", "teams", "users"]
 
         if CAS_ENABLED
                 before_filter CASClient::Frameworks::Rails::Filter, :unless => :skip_login?

@@ -36,19 +36,30 @@ class UsersController < ApplicationController
 	def project
 		@user = User.find(params[:user_id])
 
-		if !have_permission? 
-			return 
+		@own = Own.find_by_user_id(params[:user_id])
+		if !own?
+			if !have_permission? 
+				return 
+			end
+			@relationship = Relationship.find_by_user_id(params[:user_id])
+			if !have_team?
+				return
+			end
+			@team = Team.find(@relationship.team_id)
+			@assignment = Assignment.find_by_team_id(@team.id)
+			if !have_project?
+				return
+			end
+			@project = Project.find(@assignment.project_id)
+		else
+			@project = Project.find(@own.project_id)
+			@assignment = Assignment.find_by_project_id(@project.id)
+			if !have_project?
+				return
+			end
+			@team = Team.find(@assignment.team_id)
 		end
-		@relationship = Relationship.find_by_user_id(params[:user_id])
-		if !have_team?
-			return
-		end
-		@team = Team.find(@relationship.team_id)
-		@assignment = Assignment.find_by_team_id(@team.id)
-		if !have_project?
-			return
-		end
-		@project = Project.find(@assignment.project_id)
+	
 		@member_ids = Relationship.where(team_id: @team.id).all
 		@members = Array.new
 		@member_ids.each do |member|
@@ -59,16 +70,25 @@ class UsersController < ApplicationController
 
 	def upload
 		@user = User.find(params[:user_id])
+		@own = Own.find_by_user_id(params[:user_id])
 
 		if !current_user?(@user) 
 			flash[:warning] = "You have no right"
 			redirect_to current_user
 			return
 		end
-		@relationship = Relationship.find_by_user_id(params[:user_id])
-		@team = Team.find(@relationship.team_id)
-		@assignment = Assignment.find_by_team_id(@team.id)
-		@project = Project.find(@assignment.project_id)
+
+		if !own?
+			@relationship = Relationship.find_by_user_id(params[:user_id])
+			@team = Team.find(@relationship.team_id)
+			@assignment = Assignment.find_by_team_id(@team.id)
+			@project = Project.find(@assignment.project_id)
+		else
+			@project = Project.find(@own.project_id)
+			@assignment = Assignment.find_by_project_id(@project.id)
+			@team = Team.find(@assignment.team_id)
+		end
+		
 
 		iteration0 = params[:iteration0]
 		iteration1 = params[:iteration1]
@@ -123,18 +143,26 @@ class UsersController < ApplicationController
 
 	def download
 		@user = User.find(params[:user_id])
+		@own = Own.find_by_user_id(params[:user_id])
 
 		if !current_user?(@user) 
 			flash[:warning] = "You have no right"
 			redirect_to current_user
 			return
 		end
-		@relationship = Relationship.find_by_user_id(params[:user_id])
-		if !have_team?
-			return
+		
+		if !own?
+			@relationship = Relationship.find_by_user_id(params[:user_id])
+			if !have_team?
+				return
+			end
+		else
+			@project = Project.find(@own.project_id)
+			@assignment = Assignment.find_by_project_id(@project.id)
+			@relationship = Relationship.find_by_team_id(@assignment.team_id)
 		end
+		
 		@team = Team.find(@relationship.team_id)
-
 		filename = params[:filename]
 		send_file("./public/uploads/"+@team.id.to_s+"/"+filename.to_s, :filename => filename.to_s, :type => "application/pdf")
 	end

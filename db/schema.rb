@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024235942) do
+ActiveRecord::Schema.define(version: 20151101053719) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "team_id"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20151024235942) do
 
   add_index "assignments", ["project_id"], name: "index_assignments_on_project_id"
   add_index "assignments", ["team_id"], name: "index_assignments_on_team_id"
+
+  create_table "owns", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "project_id"
+  end
+
+  add_index "owns", ["project_id"], name: "index_owns_on_project_id"
+  add_index "owns", ["user_id", "project_id"], name: "index_owns_on_user_id_and_project_id", unique: true
+  add_index "owns", ["user_id"], name: "index_owns_on_user_id"
 
   create_table "preassignments", force: :cascade do |t|
     t.integer  "team_id"
