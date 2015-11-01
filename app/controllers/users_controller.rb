@@ -102,39 +102,39 @@ class UsersController < ApplicationController
 
 		if iteration0 != nil
 			@project.iteration0 = iteration0.original_filename.to_s
-			#upload_file(iteration0)
+			upload_file(iteration0)
 		end
 		if iteration1 != nil
 			@project.iteration1 = iteration1.original_filename.to_s
-			#upload_file(iteration1)
+			upload_file(iteration1)
 		end
 		if iteration2 != nil
 			@project.iteration2 = iteration2.original_filename.to_s
-			#upload_file(iteration2)
+			upload_file(iteration2)
 		end
 		if iteration3 != nil
 			@project.iteration3 = iteration3.original_filename.to_s
-			#upload_file(iteration3)
+			upload_file(iteration3)
 		end
 		if iteration4 != nil
 			@project.iteration4 = iteration4.original_filename.to_s
-			#upload_file(iteration4)
+			upload_file(iteration4)
 		end
 		if poster != nil
 			@project.poster = poster.original_filename.to_s
-			#upload_file(poster)
+			upload_file(poster)
 		end
 		if first_video != nil
 			@project.first_video = first_video.original_filename.to_s
-			#upload_file(first_video)
+			upload_file(first_video)
 		end
 		if final_video != nil
 			@project.final_video = final_video.original_filename.to_s
-			#upload_file(final_video)
+			upload_file(final_video)
 		end
 		if final_report != nil
 			@project.final_report = final_report.original_filename.to_s
-			#upload_file(final_report)
+			upload_file(final_report)
 		end
 		@project.save
 		
@@ -164,7 +164,7 @@ class UsersController < ApplicationController
 		
 		@team = Team.find(@relationship.team_id)
 		filename = params[:filename]
-		#send_file("./public/uploads/"+@team.id.to_s+"/"+filename.to_s, :filename => filename.to_s, :type => "application/pdf")
+		send_file("./public/uploads/"+@team.id.to_s+"/"+filename.to_s, :filename => filename.to_s, :type => "application/pdf")
 	end
 
   def update
@@ -184,8 +184,8 @@ class UsersController < ApplicationController
 		@relationship = Relationship.find_by_user_id(params[:user_id])
 		team_id = @relationship.team_id
 		cmd = "tar czf ./public/uploads/"+team_id.to_s+".tar.gz"+" ./public/uploads/"+team_id.to_s
-		#system(cmd)
-		#send_file("./public/uploads/"+team_id.to_s+".tar.gz", :filename => team_id.to_s+".tar.gz", :type => "application/x-tar")
+		system(cmd)
+		send_file("./public/uploads/"+team_id.to_s+".tar.gz", :filename => team_id.to_s+".tar.gz", :type => "application/x-tar")
 	end
 
   def destroy
