@@ -1,0 +1,3 @@
+class OwnsController < ApplicationController
+
+end
