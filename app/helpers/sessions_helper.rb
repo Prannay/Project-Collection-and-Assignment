@@ -3,10 +3,10 @@ module SessionsHelper
         # Logs in the given user.
         def log_in(user)
 			if ApplicationController::CAS_ENABLED
-				puts "!! login now"
-				@username = session[:cas_user]
-				@login_url = CASClient::Frameworks::Rails::Filter.login_url(self)
-				session[:user_id] = @username
+				#puts "!! login now"
+				#@username = session[:cas_user]
+				#@login_url = CASClient::Frameworks::Rails::Filter.login_url(self)
+				session[:user_id] = user.id
 			else
 				session[:user_id] = user.id
 			end
@@ -55,6 +55,12 @@ module SessionsHelper
                 forget(current_user)
                 session.delete(:user_id)
                 @current_user = nil
+				if session[:cas_user]!=nil
+					session.delete(:cas_user)
+					CASClient::Frameworks::Rails::Filter.logout(self)
+				else
+					redirect_to root_url
+				end
         end
 
         # Redirects to stored location (or to the default).
@@ -96,6 +102,14 @@ module SessionsHelper
 			else
 				return true
 			end
+		end
+
+		def own?
+			if @own == nil
+				return false
+			else
+				return true
+			end		
 		end
 
 		def have_team?

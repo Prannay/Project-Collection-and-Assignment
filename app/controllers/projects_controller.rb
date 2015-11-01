@@ -34,6 +34,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
+			current_user.owns.create(project_id: @project.id)
        flash[:success] = "Project Added for Approval"
        redirect_to @project
     else

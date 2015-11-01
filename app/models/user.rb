@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :teams, dependent: :destroy
   has_many :relationships, dependent: :destroy
   has_many :memberof, through: :relationships, source: :team
+	has_many :owns, dependent: :destroy
   
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
