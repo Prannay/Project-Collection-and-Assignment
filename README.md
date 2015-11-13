@@ -3,6 +3,11 @@
 This is a fork of "Project Collection and Assignment". Now [SunshineAggies] team is adding more features to it.
 
 ===================
+#### Update at 11/01/2015
+
+ - [NOTE] Currently the CAS is set to cas-dev for testing on local machine.
+
+===================
 #### Update at 10/25/2015
 
 More user stories are implemented. 
