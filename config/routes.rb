@@ -1,117 +1,117 @@
 Rails.application.routes.draw do
+        get 'sessions/new'
 
-  get 'add_project' => 'projects#new'
+        get 'users/new'
 
-  get 'sessions/new'
+        root             'sessions#home'
+        get    'help'    => 'static_pages#help'
+        get    'about'   => 'static_pages#about'
+        get    'contact' => 'static_pages#contact'
+        get    'signup'  => 'users#new'
+        get    'login_netid' => 'static_pages#new'
+        get    'login'   => 'sessions#new'
+        post   'login'   => 'sessions#create'
+        delete 'logout'  => 'sessions#destroy'
+        get    'resetDB' => 'reset#downloadAndReset'
+        resources :users
+        resources :projects
+        resources :projects do
+                member do
+                        get :approve, :unapprove
+                        patch :toggle
+                end
+        end
 
-  get 'users/new'
+        get 'add_project'               => 'projects#new'
+        get 'approved_projects'         => "projects#approved"
+        get 'unapproved_projects'       => "projects#unapproved"
+        get 'peer_evaluation'           => "projects#do_peer_evaluation"
+        post 'peer_evaluation'          => "projects#submit_peer_evaluation"
 
-  root             'sessions#home'
-  get    'help'    => 'static_pages#help'
-  get    'about'   => 'static_pages#about'
-  get    'contact' => 'static_pages#contact'
-  get    'signup'  => 'users#new'
-	get    'login_netid' => 'static_pages#new'
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
-  get    'resetDB' => 'reset#downloadAndReset'
-  resources :users
-  resources :projects
-  resources :projects do
-    member do
-      get :approve, :unapprove
-      patch :toggle
-    end
-  end
+        resources :users do
+                get :project
+                post :upload
+                get :download
+                get :admin_download
+        end
 
-  get 'approved_projects' => "projects#approved"
-  get 'unapproved_projects' => "projects#unapproved"
+        resources :teams
 
-	resources :users do
-		get :project
-		post :upload
-		get :download
-		get :admin_download
-	end
+        resources :teams do
+                member do
+                        get :preference
+                end
+        end
 
-  resources :teams
+        resources :relationships, only: [:destroy]
+        get 'jointeam' => 'relationships#new'
+        post 'jointeam' => 'relationships#create'
+        delete 'leaveteam' => 'relationships#destroy'
 
-  resources :teams do
-    member do
-      get :preference
-    end
-  end
+        resources :preferences, only: [:create]
+        get 'assign' => 'assignments#assign'
+        get 'viewassign' => 'assignments#view'
+        get 'download' => 'assignments#download'
 
-  resources :relationships, only: [:destroy]
-  get 'jointeam' => 'relationships#new'
-  post 'jointeam' => 'relationships#create'
-  delete 'leaveteam' => 'relationships#destroy'
-
-  resources :preferences, only: [:create]
-  get 'assign' => 'assignments#assign'
-  get 'viewassign' => 'assignments#view'
-  get 'download' => 'assignments#download'
-
-  resources :preassignments
-  get 'preassignment' => 'preassignments#show'
-  post 'preassignment' => 'preassignments#view'
-  get 'preassign' => 'preassignments#new'
-  post 'preassign' => 'preassignments#create'
+        resources :preassignments
+        get 'preassignment' => 'preassignments#show'
+        post 'preassignment' => 'preassignments#view'
+        get 'preassign' => 'preassignments#new'
+        post 'preassign' => 'preassignments#create'
 
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+        # The priority is based upon order of creation: first created -> highest priority.
+        # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+        # You can have the root of your site routed with "root"
+        # root 'welcome#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+        # Example of regular route:
+        #   get 'products/:id' => 'catalog#view'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+        # Example of named route that can be invoked with purchase_url(id: product.id)
+        #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+        # Example resource route (maps HTTP verbs to controller actions automatically):
+        #   resources :products
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+        # Example resource route with options:
+        #   resources :products do
+        #     member do
+        #       get 'short'
+        #       post 'toggle'
+        #     end
+        #
+        #     collection do
+        #       get 'sold'
+        #     end
+        #   end
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+        # Example resource route with sub-resources:
+        #   resources :products do
+        #     resources :comments, :sales
+        #     resource :seller
+        #   end
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+        # Example resource route with more complex sub-resources:
+        #   resources :products do
+        #     resources :comments
+        #     resources :sales do
+        #       get 'recent', on: :collection
+        #     end
+        #   end
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+        # Example resource route with concerns:
+        #   concern :toggleable do
+        #     post 'toggle'
+        #   end
+        #   resources :posts, concerns: :toggleable
+        #   resources :photos, concerns: :toggleable
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+        # Example resource route within a namespace:
+        #   namespace :admin do
+        #     # Directs /admin/products/* to Admin::ProductsController
+        #     # (app/controllers/admin/products_controller.rb)
+        #     resources :products
+        #   end
 end

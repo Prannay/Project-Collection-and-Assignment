@@ -2,42 +2,41 @@
 <h1>Enter Project Proposal</h1>
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <%= form_for(@project) do |f| %>
+    <div class="col-md-4 col-md-offset-4">
+        <%= form_for(@project) do |f| %>
 
-      <%= render 'shared/error_messages', object: f.object %>
+            <%= render 'shared/error_messages', object: f.object %>
 
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form_control" %>
- 
-    <%= f.label :organization %><br>
-    <%= f.text_field :organization, class: "form_control" %>
- 
-    <%= f.label :contact %><br>
-    <%= f.text_area :contact, class: "form_control", rows: 4 %>
- 
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form_control", rows: 8 %>
- 
-    <%= f.label :oncampus , "*Is On-Campus ?" %><br/>
-    <%= f.check_box :oncampus, class: "form_control" %>
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "form_control" %>
 
-    <br/><br/>
+            <%= f.label :organization %><br>
+            <%= f.text_field :organization, class: "form_control" %>
 
-    <%= f.label :islegacy, "*Is Legacy Project ?" %><br/>
-    <%= f.check_box :islegacy, class: "form_control" %>  
-    
-    <div class="col-md-6 col-md-offset-3">
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+            <%= f.label :contact %><br>
+            <%= f.text_area :contact, class: "form_control", rows: 4 %>
+
+            <%= f.label :description %><br>
+            <%= f.text_area :description, class: "form_control", rows: 8 %>
+
+            <%= f.label :oncampus , "*Is On-Campus ?" %><br/>
+            <%= f.check_box :oncampus, class: "form_control" %>
+
+            <br/><br/>
+
+            <%= f.label :islegacy, "*Is Legacy Project ?" %><br/>
+            <%= f.check_box :islegacy, class: "form_control" %>
+
+            <div class="col-md-6 col-md-offset-3">
+                <%= f.submit "Submit", class: "btn btn-primary" %>
+            </div>
+
+        <% end %>
+
     </div>
-    
-    <% end %>
-   
-  </div>    
 </div>
 
-    <br/><br/> <br/>  
-    <i><b>*On-Campus  Project</i>: </b> 
-    A project whose customer location is reachable by <a href="http://transport.tamu.edu/busroutes/" target="_blank">TAMU Buses</a><br/>
-    <i><b>*Legacy Project </i>: </b> A project which is already in production. The proposal is for the enhancement. <br/> 
-
+<br/><br/> <br/>
+<i><b>*On-Campus  Project</i>: </b>
+A project whose customer location is reachable by <a href="http://transport.tamu.edu/busroutes/" target="_blank">TAMU Buses</a><br/>
+<i><b>*Legacy Project </i>: </b> A project which is already in production. The proposal is for the enhancement. <br/>
