@@ -2,6 +2,12 @@
 
 This is a fork of "Project Collection and Assignment". Now [SunshineAggies] team is adding more features to it.
 
+
+===================
+#### Update at 11/13/2015
+
+ - add peer evaluation
+
 ===================
 #### Update at 11/01/2015
 
