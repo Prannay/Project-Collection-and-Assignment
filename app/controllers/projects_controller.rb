@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
                 # @title = "Unapproved Projects"
                 @title = "Approved Projects"
                 @projects = Project.where("approved = ?", true).paginate(page: params[:page])
-
+                flash.now[:success] = 'Peer evaluation results have been saved.'
                 render 'index'
         end
 

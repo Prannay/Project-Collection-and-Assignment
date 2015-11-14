@@ -10,7 +10,7 @@
                 <p/><p/><p/><p/><p/><p/>
 
                 <%= "* \Q1. How about the perform?" %>
-                <%= select_tag(:city_id, options_for_select([['Work less', -1], ['Finish what was assigned', 0], ['Work more', 1]])) %>
+                <%= select_tag(:city_id, options_for_select([['Work less', -1], ['Finish what was assigned', 0], ['Work more', 1]]), required: true) %>
 
                 <%= "* \Q2. Comments" %>
                 <%= f.text_area :comment, class: "form_control", rows: 4 %>
