@@ -1,12 +1,14 @@
 #Project Collection and Assignment
 
-This is a fork of "Project Collection and Assignment". Now [SunshineAggies] team is adding more features to it.
+This is a fork of "Project Collection and Assignment". Now [SunshineAggies] is working on this project.
 
 
 ===================
 #### Update at 11/13/2015
 
  - add peer evaluation
+ - update herokuapp code
+ - add notice to peer evaluation
 
 ===================
 #### Update at 11/01/2015
