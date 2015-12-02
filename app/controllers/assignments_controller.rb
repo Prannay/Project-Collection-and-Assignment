@@ -75,6 +75,15 @@ class AssignmentsController < ApplicationController
   end
 
   def view
+		@team_names = Array.new
+		@project_names = Array.new
+		Team.find_each do |team|
+			@team_names << team.name
+		end
+		Project.find_each do |project|
+			@project_names << project.title
+		end
+
     @assignments = []
     assign = Assignment.all
     assign.each do |a|
@@ -84,6 +93,22 @@ class AssignmentsController < ApplicationController
        @assignments << hash
     end
   end
+
+	def delete
+		@assigned = Assignment.find_by_project_id(params[:project_id])
+		@assigned.destroy
+		flash[:success] = "Delete successful"
+		redirect_to viewassign_path
+	end
+
+	def add
+		assignment = Assignment.new
+		assignment.team_id = Team.find_by_name(params[:team_name].to_s).id
+		assignment.project_id = Project.find_by_title(params[:project_title].to_s).id
+		assignment.save
+		flash[:success] = "Successfully assigned project "+ params[:project_title].to_s+" to team "+params[:team_name].to_s
+		redirect_to viewassign_path
+	end
 
   private
   #   In this program, we will match the student groups with the projects as per their provided preferences as top or bottom project.

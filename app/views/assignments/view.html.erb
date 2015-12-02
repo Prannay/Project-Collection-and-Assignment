@@ -37,9 +37,22 @@
 	  				<%= pref_name[0] %>
 	  			<% end %>
 	  		</div>
+			<div>
+				<%= button_to "Delete Assignment", {action: "delete", team_id: @assignments[i][:team_id], project_id: @assignments[i][:project_id]} %>
+			</div>
 	  	</li>
   	<% end %>
 </ul>
 </div>
 </div>
+<br> <br>
+<h3>Assign Project</h3>
+
+
+
+<%= form_tag({action: :add}) do %>
+	<%= select_tag(:project_title, options_for_select(@project_names)) %>
+	<%= select_tag(:team_name, options_for_select(@team_names)) %>
+	<%=	submit_tag("Add Assignment") %>
+<% end %>
 
