@@ -1,5 +1,5 @@
 <% provide(:title, 'Team Details') %>
-<h1>Project Details</h1>
+<h1>Team Details</h1>
 
 <% if @team.is_leader?(current_user) || current_user.admin? %>
 <h2><%= link_to "Edit", edit_team_path(@team) %>
