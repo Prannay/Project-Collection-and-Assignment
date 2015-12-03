@@ -39,6 +39,89 @@
 					end
 		%></td>
   </tr>
+
+<%= form_tag({action: :update_project}) do %>
+	<tr>
+	<th> Iteration0 </th>
+	<td> 
+		<%= link_to @project.iteration0.to_s, "http://#{@project.iteration0}", :target => "_blank" %>
+		<%= text_field(:project, :iteration0) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Iteration1 </th>
+	<td> 
+		<%= link_to @project.iteration1.to_s, "http://#{@project.iteration1}", :target => "_blank" %>	
+		<%= text_field(:project, :iteration1) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Iteration2 </th>
+	<td> 
+		<%= link_to @project.iteration2.to_s, "http://#{@project.iteration2}", :target => "_blank" %>
+		<%= text_field(:project, :iteration2) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Iteration3 </th>
+	<td> 
+		<%= link_to @project.iteration3.to_s, "http://#{@project.iteration3}", :target => "_blank" %>
+		<%= text_field(:project, :iteration3) %>
+	</td>
+	</tr>
+
+	<tr>
+	<th> Iteration4 </th>
+	<td> 
+		<%= link_to @project.iteration4.to_s, "http://#{@project.iteration4}", :target => "_blank" %>
+		<%= text_field(:project, :iteration4) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> First Video </th>
+	<td> 
+		<%= link_to @project.first_video.to_s, "http://#{@project.first_video}", :target => "_blank" %>
+		<%= text_field(:project, :first_video) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Final Video </th>
+	<td>
+		<%= link_to @project.final_video.to_s, "http://#{@project.final_video}", :target => "_blank" %> 
+		<%= text_field(:project, :final_video) %> 
+	</td>
+	</tr>	
+
+	<tr>
+	<th> Final Report </th>
+	<td>
+		<%= link_to @project.final_report.to_s, "http://#{@project.final_report}", :target => "_blank" %> 
+		<%= text_field(:project, :final_report) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Poster </th>
+	<td> 
+		<%= link_to @project.poster.to_s, "http://#{@project.poster}", :target => "_blank" %>
+		<%= text_field(:project, :poster) %> 
+	</td>
+	</tr>
+
+	<tr>
+	<th> Source Code </th>
+	<td> 
+		<%= link_to @project.source_code.to_s, "http://#{@project.source_code}", :target => "_blank" %>
+		<%= text_field(:project, :source_code) %> 
+	</td>
+	</tr>
+
+<% if false %>
 	<tr>
   	<th>Iteration0</th>
   	<td><%= link_to @project.iteration0.to_s, user_download_path(:filename => @project.iteration0) %>
@@ -135,9 +218,14 @@
     <td><%= @project.approved %></td>
   </tr>
   <% end %>
+<% end %>
 </table>
+	<%=	submit_tag("Update") %>
+<% end %>
+<% if false %>
 		<% if current_user.admin? %>
 			<%= link_to "Download batch", user_admin_download_path %>
 		<% end %>
+<% end %>
 </div>
 </div>
