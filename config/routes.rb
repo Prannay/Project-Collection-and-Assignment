@@ -33,9 +33,12 @@ Rails.application.routes.draw do
                 post :upload
                 get :download
                 get :admin_download
+				post :update_project
         end
 
         resources :teams
+		post 'remove' => 'teams#remove'
+		post 'add_user' => 'teams#add_user'
 
         resources :teams do
                 member do

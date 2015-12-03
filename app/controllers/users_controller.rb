@@ -177,6 +177,26 @@ class UsersController < ApplicationController
     end
   end
 
+	def update_project
+		@relationship = Relationship.find_by_user_id(params[:user_id])
+		@team = Team.find(@relationship.team_id)
+		@assignment = Assignment.find_by_team_id(@team.id)
+		@project = Project.find(@assignment.project_id)
+		@project.iteration0 = params[:project][:iteration0]
+		@project.iteration1 = params[:project][:iteration1]
+		@project.iteration2 = params[:project][:iteration2]
+		@project.iteration3 = params[:project][:iteration3]
+		@project.iteration4 = params[:project][:iteration4]
+		@project.first_video = params[:project][:first_video]
+		@project.final_video = params[:project][:final_video]
+		@project.final_report = params[:project][:final_report]
+		@project.poster = params[:project][:poster]		
+		@project.source_code = params[:project][:source_code]	
+		@project.save	
+		flash[:success] = "Successfully updated"
+		redirect_to user_project_path(params[:user_id])
+	end
+
 	def admin_download
 		admin_user
 		

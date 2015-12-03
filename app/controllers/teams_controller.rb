@@ -37,7 +37,30 @@ class TeamsController < ApplicationController
   def show
   	@team = Team.find(params[:id])
     @members = @team.members
+
+		@user_names = Array.new
+
+		User.find_each do |user|
+			@user_names << user.name
+		end
+
   end
+
+	def remove
+		@relationship = Relationship.find_by_user_id(params[:user_id])
+		@relationship.destroy
+		flash[:success] = "Remove successful"
+		redirect_to teams_path
+	end
+
+	def add_user
+		relationship = Relationship.new
+		relationship.team_id = params[:team_id].to_s
+		relationship.user_id = User.find_by_name(params[:user_name].to_s).id
+		relationship.save
+		flash[:success] = "Successfully add user "+ params[:user_name].to_s+" to team"
+		redirect_to teams_path
+	end
   
   def create
     if current_user.teams.count != 0

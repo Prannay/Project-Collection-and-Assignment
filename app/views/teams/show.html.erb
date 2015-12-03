@@ -40,11 +40,18 @@
         <li>
           <% if current_user.admin? %>
             <%= link_to m.name, m %>
+			<%= button_to "Remove", {action: "remove", user_id: m.id} %>
           <% else %>
             <%= m.name %>
           <% end %>
         </li>
       <% end %>
+		<% if current_user.admin? %>
+			<%= form_tag({action: :add_user, team_id: @team.id}) do %>
+				<%= select_tag(:user_name, options_for_select(@user_names)) %>
+				<%=	submit_tag("Add user") %>
+			<% end %>
+		<% end %>
       </ol>
     </td>
   </tr>
