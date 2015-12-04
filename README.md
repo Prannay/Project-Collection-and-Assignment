@@ -2,6 +2,12 @@
 
 This is a fork of "Project Collection and Assignment". Now [SunshineAggies] is working on this project.
 
+===================
+#### Update at 12/01/2015
+ 
+ - admin can see the final result of peer evaluation
+ - admin can also reassign projects
+ - admin can remove / add users from a team
 
 ===================
 #### Update at 11/13/2015
