@@ -1,0 +1,47 @@
+<% provide(:title, 'Peer Evaluation') %>
+<h1>Peer Evaluation</h1>
+
+<p>Please assign a (positive integer) score to each of the team members (<em><strong>including yourself</strong></em>) according to the amount and quality of work done for the project. Use the provided space to justify your score. The full score for each student is 100. However, <em><strong>you can only distribute a total of 80 scores</strong></em> to all your team members (including yourself). For example, suppose you have six members (A-F) in your team, you may assign:</p>
+
+<table >
+    <tbody>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A (you) = 20</td> </tr>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B = 20</td> </tr>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C = 15</td> </tr>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D = 10</td> </tr>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E = 10</td> </tr>
+        <tr> <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F = 5</td> </tr>
+    </tbody>
+</table>
+<br/>
+<p>NOTE: you should make your judgment based on the entire project, not just recent activity (or lack thereof); also consider things like document writing and leadership (not just coding and testing), and give people some credit for at least making an effort (i.e. think carefully before giving someone a very low score).</p>
+
+<br/>
+<br/>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <% mycounter = 1 %>
+        <%= form_for(:peer_evaluation) do |f| %>
+            <% @members.each do |member| %>
+                <div class="h3"> <%= label_tag "Member\##{mycounter} : " + member.name +
+                                 ((member.id == current_user.id) ? " **" : "") %> </div>
+                <p/><p/><p/><p/><p/><p/>
+
+                <%= "* \Q1. Score" %>
+                <%= f.text_field "#{member.id.to_s}.score", :type => "number", :min => 0, :step => 1, :max => 80, :required => true,
+                :value => ((not @current_pe.nil? and not @current_pe.empty?) ? @current_pe["#{member.id.to_s}"]["score"] : "") %>
+
+                <%= "* \Q2. Comments" %>
+                <%= f.text_area "#{member.id.to_s}.comment", :class => "form_control", :rows => 4, :required => true, :minlength => 10,
+                    :value => ((not @current_pe.nil? and not @current_pe.empty?) ? @current_pe["#{member.id.to_s}"]["comment"] : "")%>
+                <hr>
+                <% mycounter += 1%>
+            <% end %>
+            <div class="col-md-6 col-md-offset-3">
+                <%= f.submit "Submit", class: "btn btn-primary" %>
+            </div>
+
+        <% end %>
+    </div>
+</div>

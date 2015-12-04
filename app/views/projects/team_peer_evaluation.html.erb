@@ -1,0 +1,60 @@
+<% provide(:title, 'Peer Evaluation Result') %>
+<h1>Peer Evaluation Result of Team <%= @team.name %> </h1>
+<br/>
+<br/>
+<br/>
+<h2> Scores </h2>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Team</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @all_pe.each do |pe| %>
+                    <tr>
+                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_one_user_peer_evaluation => "#{pe[4]}") %> </td>
+                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_team_peer_evaluation => "#{pe[5]}") %> </td>
+                        <td> <%= pe[1] %> </td>
+                        <td> <%= pe[2] %> </td>
+                        <td> <%= pe[3] %> </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<h2> Comments </h2>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Team</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @all_pe.each do |pe| %>
+                    <tr>
+                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_one_user_peer_evaluation => "#{pe[4]}") %> </td>
+                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_team_peer_evaluation => "#{pe[5]}") %> </td>
+                        <td> <%= pe[1] %> </td>
+                        <td> <%= pe[2] %> </td>
+                        <td> <%= pe[3] %> </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+
+    </div>
+</div>
