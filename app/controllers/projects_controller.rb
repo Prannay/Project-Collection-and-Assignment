@@ -89,8 +89,6 @@ class ProjectsController < ApplicationController
                         return
                 end
 
-
-
                 render 'team_peer_evaluation'
         end
 
@@ -121,9 +119,20 @@ class ProjectsController < ApplicationController
                         p @current_pe
 
                         # @title = "Unapproved Projects"
-                        @team = current_user.is_member_of
+                        the_user = User.find_by(id: the_user_id)
+                        p the_user
+                        p "*******************************"
+                        @team = the_user.is_member_of
+                        p @team
+                        if @team.nil?
+                                flash.now[:danger] = "Can't find your team"
+                                @title = "Approved Projects"
+                                @projects = Project.where("approved = ?", true).paginate(page: params[:page])
+                                render 'home'
+                                return
+                        end
                         @members = @team.members
-                        render 'peer_eval'
+                        render 'peer_evaluation'
                         return
                 end
 
