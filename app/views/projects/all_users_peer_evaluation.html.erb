@@ -15,8 +15,7 @@
                 <% @all_pe.each do |pe| %>
                     <tr>
                         <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_one_user_peer_evaluation => "#{pe[4]}") %> </td>
-                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_team_peer_evaluation => "#{pe[5]}") %> </td>
-                        <td> <%= pe[1] %> </td>
+                        <td> <%= link_to "#{pe[1]}", peer_evaluation_path(:check_team_peer_evaluation => "#{pe[5]}") %> </td>
                         <td> <%= pe[2] %> </td>
                         <td> <%= pe[3] %> </td>
                     </tr>
