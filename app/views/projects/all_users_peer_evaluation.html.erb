@@ -18,8 +18,10 @@
                         <td> <%= link_to "#{pe[1]}", peer_evaluation_path(:check_team_peer_evaluation => "#{pe[5]}") %> </td>
                         <td> <%= pe[2] %> </td>
                         <td>
-                            <% pe[3].each do |comment| %>
-                             <%= comment %> <br/>
+                            <% if not pe[3].empty?
+                                <% pe[3].each do |comment| %>
+                                    <%= comment %> <br/>
+                                <% end %>
                             <% end %>
                         </td>
                     </tr>
