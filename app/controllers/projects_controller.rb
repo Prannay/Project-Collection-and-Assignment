@@ -99,56 +99,32 @@ class ProjectsController < ApplicationController
                         user_pe = []
                         user_pe << user.name
 
-                        # get team name
-                        team = user.is_member_of
-                        if (team.nil?)
-                                user_pe << ""
-                                user_pe << ""
-                                user_pe << ""
-                                user_pe << user.id
-                                user_pe << -1
-                        else
-
-                                score = 0
-                                comment = []
-                                members = team.members
-                                members.each do |member|
-                                        member_record = User.find_by(id: member.id)
-                                        pe = member_record.peer_evaluation
-                                        if (not pe.nil?) and (not pe.empty?) and pe.has_key?(user.id.to_s)
-                                                if pe[user.id.to_s].has_key?("score")
-                                                        user_pe << pe[user.id.to_s]["score"].to_i
-                                                else
-                                                        user_pe << ""
-                                                end
+                        all_users.each do |member|
+                                member_record = User.find_by(id: member.id)
+                                pe = member_record.peer_evaluation
+                                if (not pe.nil?) and (not pe.empty?) and pe.has_key?(user.id.to_s)
+                                        if pe[user.id.to_s].has_key?("score")
+                                                user_pe << pe[user.id.to_s]["score"].to_i
                                         else
                                                 user_pe << ""
                                         end
+                                else
+                                        user_pe << ""
                                 end
+                        end
 
-                                members.each do |member|
-                                        member_record = User.find_by(id: member.id)
-                                        pe = member_record.peer_evaluation
-                                        if (not pe.nil?) and (not pe.empty?) and pe.has_key?(user.id.to_s)
-                                                if pe[user.id.to_s].has_key?("comment")
-                                                        user_pe << pe[user.id.to_s]["comment"]
-                                                else
-                                                        user_pe << ""
-                                                end
+                        all_users.each do |member|
+                                member_record = User.find_by(id: member.id)
+                                pe = member_record.peer_evaluation
+                                if (not pe.nil?) and (not pe.empty?) and pe.has_key?(user.id.to_s)
+                                        if pe[user.id.to_s].has_key?("comment")
+                                                user_pe << pe[user.id.to_s]["comment"]
                                         else
                                                 user_pe << ""
                                         end
+                                else
+                                        user_pe << ""
                                 end
-                                # comment_str = ""
-                                # comment.each_with_index do |c, i|
-                                #         comment_str += "<pre>" + c + "</pre>"
-                                #         if i < comment.size - 1
-                                #                 comment_str += " <br\> "
-                                #         end
-                                # end
-
-                                user_pe << score
-                                user_pe << comment
                         end
 
                         @all_pe << user_pe
