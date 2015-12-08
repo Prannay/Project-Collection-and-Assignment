@@ -16,14 +16,14 @@
                 </tr>
             </thead>
             <tbody>
+                <% counter = 1 %>
                 <% @all_pe.each do |pe| %>
                     <tr>
-                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_one_user_peer_evaluation => "#{pe[4]}") %> </td>
-                        <% counter = 1 %>
-                        <% @team.members.each do |m| %>
+                        <td> <%= pe[0] %> </td>
+                        <% @all_pe.each do |pe| %>
                             <td> <%= pe[counter] %> </td>
-                            <% counter+= 1 %>
                         <% end %>
+                        <% counter+= 1 %>
                     </tr>
                 <% end %>
             </tbody>
@@ -45,14 +45,14 @@
                 </tr>
             </thead>
             <tbody>
+                <% @team.members.size() + 1 %>
                 <% @all_pe.each do |pe| %>
                     <tr>
-                        <td> <%= link_to "#{pe[0]}", peer_evaluation_path(:check_one_user_peer_evaluation => "#{pe[4]}") %> </td>
-                        <% counter = @team.members.size() + 1 %>
-                        <% @team.members.each do |m| %>
+                        <td> <%= pe[0] %> </td>
+                        <% @all_pe.each do |pe| %>
                             <td> <%= pe[counter] %> </td>
-                            <% counter+= 1 %>
                         <% end %>
+                        <% counter+= 1 %>
                     </tr>
                 <% end %>
             </tbody>

@@ -54,6 +54,13 @@ class TeamsController < ApplicationController
 	end
 
 	def add_user
+		usr = User.find_by_name(params[:user_name].to_s)
+		on_team = Relationship.find_by_user_id(usr.id)
+		if on_team != nil
+			flash[:error] = "This user is already on a team"
+			redirect_to teams_path
+			return
+		end
 		relationship = Relationship.new
 		relationship.team_id = params[:team_id].to_s
 		relationship.user_id = User.find_by_name(params[:user_name].to_s).id

@@ -102,6 +102,15 @@ class AssignmentsController < ApplicationController
 	end
 
 	def add
+		team = Team.find_by_name(params[:team_name].to_s)
+		team_assigned = Assignment.find_by_team_id(team.id)
+		project = Project.find_by_title(params[:project_title].to_s)
+		project_assigned = Assignment.find_by_project_id(project.id)
+		if team_assigned != nil || project_assigned != nil
+			flash[:error] = "Team or Project was already assigned"
+			redirect_to viewassign_path
+			return
+		end
 		assignment = Assignment.new
 		assignment.team_id = Team.find_by_name(params[:team_name].to_s).id
 		assignment.project_id = Project.find_by_title(params[:project_title].to_s).id
