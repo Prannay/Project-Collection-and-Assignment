@@ -2,14 +2,14 @@ module SessionsHelper
 
         # Logs in the given user.
         def log_in(user)
-			if ApplicationController::CAS_ENABLED
-				#puts "!! login now"
-				#@username = session[:cas_user]
-				#@login_url = CASClient::Frameworks::Rails::Filter.login_url(self)
-				session[:user_id] = user.id
-			else
-				session[:user_id] = user.id
-			end
+                        if ApplicationController::CAS_ENABLED
+                                #puts "!! login now"
+                                #@username = session[:cas_user]
+                                #@login_url = CASClient::Frameworks::Rails::Filter.login_url(self)
+                                session[:user_id] = user.id
+                        else
+                                session[:user_id] = user.id
+                        end
         end
 
         # Remembers a user in a persistent session.
@@ -55,12 +55,12 @@ module SessionsHelper
                 forget(current_user)
                 session.delete(:user_id)
                 @current_user = nil
-				if session[:cas_user]!=nil
-					session.delete(:cas_user)
-					CASClient::Frameworks::Rails::Filter.logout(self)
-				else
-					redirect_to root_url
-				end
+                if session[:cas_user]!=nil
+                        session.delete(:cas_user)
+                        CASClient::Frameworks::Rails::Filter.logout(self)
+                else
+                        redirect_to root_url
+                end
         end
 
         # Redirects to stored location (or to the default).
@@ -94,48 +94,48 @@ module SessionsHelper
                 redirect_to(root_url) unless current_user.admin?
         end
 
-		def have_permission?
-			if !current_user?(@user) && !current_user.admin?
-				flash[:warning] = "You have no right"
-				redirect_to current_user
-				return false
-			else
-				return true
-			end
-		end
+                def have_permission?
+                        if !current_user?(@user) && !current_user.admin?
+                                flash[:warning] = "You have no right"
+                                redirect_to current_user
+                                return false
+                        else
+                                return true
+                        end
+                end
 
-		def own?
-			if @own == nil
-				return false
-			else
-				return true
-			end		
-		end
+                def own?
+                        if @own == nil
+                                return false
+                        else
+                                return true
+                        end
+                end
 
-		def have_team?
-			if @relationship == nil
-				flash[:warning] = "You still have no team"
-				redirect_to current_user
-				return false
-			else
-				return true
-			end
-		end
-		
-		def have_project?
-			if @assignment == nil
-				flash[:warning] = "Project has not been assigned"
-				redirect_to current_user
-				return false
-			else
-				return true
-			end
-		end
+                def have_team?
+                        if @relationship == nil
+                                flash[:warning] = "You still have no team"
+                                redirect_to current_user
+                                return false
+                        else
+                                return true
+                        end
+                end
 
-		def upload_file(f)
-			File.open(Rails.root.join('public', 'uploads', @team.id.to_s, f.original_filename.to_s), 'wb') do |file|
-				file.write(f.read)
-			end
-			flash[:success] = f.original_filename.to_s + " uploaded"
-		end
+                def have_project?
+                        if @assignment == nil
+                                flash[:warning] = "Project has not been assigned"
+                                redirect_to current_user
+                                return false
+                        else
+                                return true
+                        end
+                end
+
+                def upload_file(f)
+                        File.open(Rails.root.join('public', 'uploads', @team.id.to_s, f.original_filename.to_s), 'wb') do |file|
+                                file.write(f.read)
+                        end
+                        flash[:success] = f.original_filename.to_s + " uploaded"
+                end
 end
