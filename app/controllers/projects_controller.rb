@@ -84,7 +84,7 @@ class ProjectsController < ApplicationController
         def list_team_peer_evaluation
                 @team = Team.find_by(id: params["check_team_peer_evaluation"].to_i)
                 if @team.nil?
-                        flash[:danger] = "Can't find the team"
+                        flash.now[:danger] = "Can't find the team"
                         redirect_to :back
                         return
                 end
@@ -185,7 +185,7 @@ class ProjectsController < ApplicationController
 
         def submit_peer_evaluation
                 if not params.has_key?(:peer_evaluation)
-                        flash[:danger] = 'The content of peer evaluation is missing.'
+                        flash.now[:danger] = 'The content of peer evaluation is missing.'
                         do_peer_evaluation
                         return
                 end
@@ -214,7 +214,7 @@ class ProjectsController < ApplicationController
                 end
 
                 if score_sum != 80
-                        flash[:danger] = 'The scores summary is not equal to 80.'
+                        flash.now[:danger] = 'The scores summary is not equal to 80.'
                         do_peer_evaluation
                         return
                 end
@@ -224,7 +224,7 @@ class ProjectsController < ApplicationController
                 user.peer_evaluation = result
                 user.save!
 
-                flash[:success] = 'Peer evaluation results have been saved.'
+                flash.now[:success] = 'Peer evaluation results have been saved.'
                 do_peer_evaluation
         end
 
