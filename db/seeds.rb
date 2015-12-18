@@ -23,9 +23,9 @@ user.save!
 #   email = "example-#{n+1}@railstutorial.org"
 #   password = "password"
 #   User.create!(name:  name,
-#                email: email,
-#                password:              password,
-#                password_confirmation: password)
+#                 email: email,
+#                 password:              password,
+#                 password_confirmation: password)
 # end
 
 # 30.times do |n|
@@ -45,7 +45,7 @@ user.save!
 #                   approved: approved)
 # end
 
-# 20.times do |n|
+# 25.times do |n|
 #   title  = Faker::Company.catch_phrase
 #   organization = Faker::Company.name
 #   contact = Faker::Name.name + "  " + Faker::PhoneNumber.cell_phone
@@ -63,7 +63,6 @@ user.save!
 # end
 
 # users = User.all
-
 
 # 20.times do |n|
 #   name = Faker::Internet.domain_word
@@ -88,22 +87,23 @@ user.save!
 #   preteam = Team.find_by(id: p.team_id)
 #   teams -= [preteam]
 # end
-# projects=Project.where("approved = ?", true)
-# rnd = Random.new
+
+# teams = Team.all
+# projects = Project.where("approved = ?", true)
+# rnd = Random.new(Time.now.to_i)
 
 # teams.each do |t|
-#   #count = 0
-#   projects.each do |p|
-#     value = rnd.rand(-1..1)
-#     #value = 0
-#     #if count < 5
-#     #  value = 1
-#     #elsif count >= 15
-#     #  value = -1
-#     #end
-#     #count += 1
+#   projects.each do |proj|
+#     v = rnd.rand(-10..10)
+#     if v > 9
+#       v = 1
+#     elsif v < 0
+#       v = -1
+#     else
+#       v = 0
+#     end
 #     Preference.create!(team_id: t.id,
-#                        project_id: p.id,
-#                        value: value)
+#                         project_id: proj.id,
+#                         value: v)
 #   end
 # end
